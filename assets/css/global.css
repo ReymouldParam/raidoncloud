@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    background: #071521;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.main-header {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-container {
+    width: 85%;
+    margin: auto;
+    padding: 12px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.logo img {
+    height: 58px;
+    object-fit: contain;
+}
+
+.desktop-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .3s;
+    position: relative;
+}
+
+.desktop-nav a.active {
+    color: #ffc928;
+}
+
+.desktop-nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -14px;
+    width: 100%;
+    height: 2px;
+    background: #ffc928;
+}
+
+.contact-btn {
+    background: #ffc928;
+    color: #111;
+    text-decoration: none;
+
+    padding: 16px 28px;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-weight: 400;
+    transition: .3s;
+}
+
+.contact-btn i {
+    font-size: 14px;
+    margin-left: 4px;
+    transform: rotate(-45deg);
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+}
