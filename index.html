@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="./assets/css/global.css" />
         <link rel="stylesheet" href="./assets/css/home.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     </head>
 
     <body>
@@ -76,14 +79,13 @@
                     <div class="hero-bottom-card">
 
                         <div class="hero-info">
-                            <h1>
-                                Digital
-                                <span>Transformation</span>
+                            <h1 id="heroHeading" class="is-active">
+                                <span class="line"><span id="lineOne">Digital</span></span>
+                                <span class="line"><span id="lineTwo">Transformation</span></span>
                             </h1>
 
-                            <p>
-                                We deliver scalable, secure, and innovative IT
-                                solutions for businesses ready to grow.
+                            <p id="heroPara">
+                                We deliver scalable, secure, and innovative IT solutions for businesses ready to grow.
                             </p>
                         </div>
 
@@ -121,8 +123,8 @@
                         <div class="about-right">
 
                             <div class="section-tag">
-                                <span>About Us</span>
-                                <div class="tag-line"></div>
+                                <h2>About Us</h2>
+                                <span></span>
                             </div>
 
                             <p>
@@ -265,129 +267,296 @@
                 </div>
 
             </section>
-            <section class="testimonial-section">
+            <section class="testimonial-contact-wrapper">
+                <section class="testimonial-section">
 
-                <div class="testimonial-left">
+                    <div class="testimonial-left">
 
-                    <div class="testimonial-label">
-                        <span>Testimonial</span>
+                        <div class="testimonial-label">
+                            <h3>Testimonial</h3>
+                            <span></span>
+                        </div>
+
+                        <h2>
+                            See what clients say about
+                            cooperation with
+                        </h2>
+
+                        <p>
+                            We deliver scalable, secure, and innovative IT solutions
+                            for businesses ready to grow.
+                        </p>
+
                     </div>
 
-                    <h2>
-                        See what clients say about
-                        cooperation with
-                    </h2>
+                    <div class="testimonial-right">
 
-                    <p>
-                        We deliver scalable, secure, and innovative IT solutions
-                        for businesses ready to grow.
-                    </p>
+                        <div class="testimonial-stack">
 
-                </div>
+                            <div class="testimonial-card">
+                                <div class="user-image">
+                                    <img src="assets/images/user-1.jpg" alt="">
+                                </div>
 
-                <div class="testimonial-right">
+                                <div class="content">
+                                    <h4>John Doe</h4>
+                                    <p>
+                                        Cras tincidunt, sapien eget scelerisque tincidunt,
+                                        est urna aliquet ex, a pretium elit nulla a lacus.
+                                    </p>
+                                </div>
 
-                    <div class="testimonial-stack">
-
-                        <div class="testimonial-card">
-                            <div class="user-image">
-                                <img src="assets/images/user-1.jpg" alt="">
+                                <div class="quote-icon">❞</div>
                             </div>
 
-                            <div class="content">
-                                <h4>John Doe</h4>
-                                <p>
-                                    Cras tincidunt, sapien eget scelerisque tincidunt,
-                                    est urna aliquet ex, a pretium elit nulla a lacus.
-                                </p>
+                            <div class="testimonial-card">
+                                <div class="user-image">
+                                    <img src="assets/images/user-2.jpg" alt="">
+                                </div>
+
+                                <div class="content">
+                                    <h4>Sarah Smith</h4>
+                                    <p>
+                                        Cras tincidunt, sapien eget scelerisque tincidunt,
+                                        est urna aliquet ex, a pretium elit nulla a lacus.
+                                    </p>
+                                </div>
+
+                                <div class="quote-icon">❞</div>
                             </div>
 
-                            <div class="quote-icon">❞</div>
+                            <div class="testimonial-card">
+                                <div class="user-image">
+                                    <img src="assets/images/user-3.jpg" alt="">
+                                </div>
+
+                                <div class="content">
+                                    <h4>Robert Lee</h4>
+                                    <p>
+                                        Cras tincidunt, sapien eget scelerisque tincidunt,
+                                        est urna aliquet ex, a pretium elit nulla a lacus.
+                                    </p>
+                                </div>
+
+                                <div class="quote-icon">❞</div>
+                            </div>
+
+                            <div class="testimonial-card">
+                                <div class="user-image">
+                                    <img src="assets/images/user-4.jpg" alt="">
+                                </div>
+
+                                <div class="content">
+                                    <h4>Emily Clark</h4>
+                                    <p>
+                                        Cras tincidunt, sapien eget scelerisque tincidunt,
+                                        est urna aliquet ex, a pretium elit nulla a lacus.
+                                    </p>
+                                </div>
+
+                                <div class="quote-icon">❞</div>
+                            </div>
+
+
+                            <div class="testimonial-card">
+                                <div class="user-image">
+                                    <img src="assets/images/user-4.jpg" alt="">
+                                </div>
+
+                                <div class="content">
+                                    <h4>Abhi</h4>
+                                    <p>
+                                        Cras tincidunt, sapien eget scelerisque tincidunt,
+                                        est urna aliquet ex, a pretium elit nulla a lacus.
+                                    </p>
+                                </div>
+
+                                <div class="quote-icon">❞</div>
+                            </div>
+
+                            <div class="testimonial-card">
+                                <div class="user-image">
+                                    <img src="assets/images/user-4.jpg" alt="">
+                                </div>
+
+                                <div class="content">
+                                    <h4>Karthi</h4>
+                                    <p>
+                                        Cras tincidunt, sapien eget scelerisque tincidunt,
+                                        est urna aliquet ex, a pretium elit nulla a lacus.
+                                    </p>
+                                </div>
+
+                                <div class="quote-icon">❞</div>
+                            </div>
                         </div>
 
-                        <div class="testimonial-card">
-                            <div class="user-image">
-                                <img src="assets/images/user-2.jpg" alt="">
-                            </div>
-
-                            <div class="content">
-                                <h4>Sarah Smith</h4>
-                                <p>
-                                    Cras tincidunt, sapien eget scelerisque tincidunt,
-                                    est urna aliquet ex, a pretium elit nulla a lacus.
-                                </p>
-                            </div>
-
-                            <div class="quote-icon">❞</div>
-                        </div>
-
-                        <div class="testimonial-card">
-                            <div class="user-image">
-                                <img src="assets/images/user-3.jpg" alt="">
-                            </div>
-
-                            <div class="content">
-                                <h4>Robert Lee</h4>
-                                <p>
-                                    Cras tincidunt, sapien eget scelerisque tincidunt,
-                                    est urna aliquet ex, a pretium elit nulla a lacus.
-                                </p>
-                            </div>
-
-                            <div class="quote-icon">❞</div>
-                        </div>
-
-                        <div class="testimonial-card">
-                            <div class="user-image">
-                                <img src="assets/images/user-4.jpg" alt="">
-                            </div>
-
-                            <div class="content">
-                                <h4>Emily Clark</h4>
-                                <p>
-                                    Cras tincidunt, sapien eget scelerisque tincidunt,
-                                    est urna aliquet ex, a pretium elit nulla a lacus.
-                                </p>
-                            </div>
-
-                            <div class="quote-icon">❞</div>
-                        </div>
-
-
-                        <div class="testimonial-card">
-                            <div class="user-image">
-                                <img src="assets/images/user-4.jpg" alt="">
-                            </div>
-
-                            <div class="content">
-                                <h4>Abhi</h4>
-                                <p>
-                                    Cras tincidunt, sapien eget scelerisque tincidunt,
-                                    est urna aliquet ex, a pretium elit nulla a lacus.
-                                </p>
-                            </div>
-
-                            <div class="quote-icon">❞</div>
-                        </div>
-
-                        <div class="testimonial-card">
-                            <div class="user-image">
-                                <img src="assets/images/user-4.jpg" alt="">
-                            </div>
-
-                            <div class="content">
-                                <h4>Karthi</h4>
-                                <p>
-                                    Cras tincidunt, sapien eget scelerisque tincidunt,
-                                    est urna aliquet ex, a pretium elit nulla a lacus.
-                                </p>
-                            </div>
-
-                            <div class="quote-icon">❞</div>
-                        </div>
                     </div>
 
-                </div>
+                </section>
+                <section class="contact-footer-section">
+                    <!-- CLIENTs -->
+                    <div class="clients-box">
+                        <h4 class="clients-title">Our Clients</h4>
+                        <div class="clients-grid">
+                            <img src="assets/images/client-logo1.png" alt="">
+                            <img src="assets/images/client-logo2.png" alt="">
+                            <img src="assets/images/client-logo3.png" alt="">
+                            <img src="assets/images/client-logo4.png" alt="">
+                            <img src="assets/images/client-logo5.png" alt="">
+                            <img src="assets/images/client-logo6.png" alt="">
+                            <img src="assets/images/client-logo7.png" alt="">
+                            <img src="assets/images/client-logo8.png" alt="">
+                        </div>
+                    </div>
+                    <!-- CONTACT -->
+                    <div class="contact-box">
+
+                        <div class="contact-top-line"></div>
+
+                        <div class="contact-grid">
+
+                            <div class="contact-left">
+
+                                <h2>GET IN TOUCH</h2>
+
+                                <p>
+                                    For enquiries or any questions please do not hesitate to contact us.
+                                </p>
+
+                                <div class="contact-image-slider">
+
+                                    <div>
+                                        <img src="assets/images/vercal-slider-img.jpg" alt="">
+                                    </div>
+
+                                    <div>
+                                        <img src="assets/images/Services-img.jpg" alt="">
+                                    </div>
+
+                                    <div>
+                                        <img src="assets/images/vercal-slider-img.jpg" alt="">
+                                    </div>
+
+                                    <div>
+                                        <img src="assets/images/Services-img.jpg" alt="">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="contact-right">
+
+                                <form>
+
+                                    <div class="form-row">
+
+                                        <div class="form-group">
+                                            <label>Full Name</label>
+                                            <input type="text" placeholder="Name">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Phone Number</label>
+                                            <input type="text" placeholder="Name">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>E-Mail*</label>
+                                        <input type="email" placeholder="Name">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>What Are You Interested In Services</label>
+                                        <textarea placeholder="Ex. Design, Development etc."></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Type Your Message</label>
+                                        <textarea placeholder="Message Here"></textarea>
+                                    </div>
+
+                                    <div class="checkbox-area">
+
+                                        <input type="checkbox">
+
+                                        <span>
+                                            By clicking the submit button, you agree to our privacy policy
+                                        </span>
+
+                                    </div>
+
+                                    <button type="submit" class="submit-btn">
+                                        Submit Request
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+                <footer class="footer-section">
+
+                    <div class="footer-top-line"></div>
+
+                    <div class="footer-content">
+
+                        <div class="footer-column address">
+                            <h4>Address</h4>
+
+                            <p>
+                                H.No. 5-5-35/252/4/plot-23, At<br>
+                                Durga Shakthipuram, Prasanthi<br>
+                                Nagar, IDA Kukatpally, Hyderabad,<br>
+                                Telangana, India-500072
+                            </p>
+                        </div>
+
+                        <div class="footer-column">
+                            <h4>Email</h4>
+
+                            <a href="#">info@xyz.com</a>
+                            <a href="#">name@xyz.com</a>
+                        </div>
+
+                        <div class="footer-column">
+                            <h4>Social Media</h4>
+
+                            <div class="social-icons">
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="footer-column">
+                            <h4>Contact</h4>
+
+                            <a href="tel:+919966326477">
+                                +91-9966326477
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="footer-bottom-line"></div>
+
+                    <div class="copyright">
+                        Copyright 2025 xyz | All Rights Reserved | Designed by ReyMould
+                    </div>
+
+                </footer>
 
             </section>
         </div>
@@ -423,35 +592,29 @@
         </script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
         <script>
             const testimonialCards =
                 gsap.utils.toArray(".testimonial-card");
-
             const cardGap = 220;
-
             testimonialCards.forEach((card, index) => {
-
                 gsap.set(card, {
                     y: (index - 1) * cardGap,
                     scale: index === 1 ? 1 : 0.9,
                     opacity: index === 1 ? 1 : 0.15
                 });
-
             });
 
             let activeIndex = 1;
-
             function updateCards() {
-
                 testimonialCards.forEach(card => {
                     card.classList.remove("active-card");
                 });
-
                 testimonialCards.forEach((card, index) => {
-
                     const relative = index - activeIndex;
-
                     gsap.to(card, {
                         y: relative * cardGap,
                         scale: relative === 0 ? 1 : 0.9,
@@ -459,33 +622,104 @@
                         duration: 1,
                         ease: "power3.inOut"
                     });
-
                     if (relative === 0) {
                         card.classList.add("active-card");
                     }
-
                 });
-
             }
-
             updateCards();
-
             setInterval(() => {
-
                 activeIndex++;
-
                 if (activeIndex >= testimonialCards.length) {
-
                     gsap.set(testimonialCards[0], {
                         y: cardGap * 2
                     });
-
                     activeIndex = 0;
                 }
-
                 updateCards();
 
             }, 2500);
+        </script>
+        <script>
+            $('.contact-image-slider').slick({
+                vertical: true,
+                verticalSwiping: true,
+
+                slidesToShow: 1,
+                slidesToScroll: 1,
+
+                arrows: false,
+                dots: true,
+
+                infinite: true,
+
+                autoplay: true,
+                autoplaySpeed: 3000,
+
+                speed: 800,
+
+                pauseOnHover: false
+            });
+        </script>
+        <script>
+            const categories = [
+                { lineOne: "Digital", lineTwo: "Transformation", para: "We deliver scalable, secure, and innovative IT solutions for businesses ready to grow." },
+                { lineOne: "Cloud", lineTwo: "Infrastructure", para: "We architect resilient, cost-efficient cloud environments built to scale with your business." },
+                { lineOne: "Cyber", lineTwo: "Security", para: "We protect your digital assets with proactive, enterprise-grade security solutions." }
+            ];
+
+            const SWITCH_TIMES_MS = [0, 5400, 11700];
+            const LOOP_DURATION_MS = 18000;
+            const HEADING_EXIT_DURATION = 400;
+            const PARA_FADE_OUT_DURATION = 350;
+
+            const heading = document.getElementById('heroHeading');
+            const lineOneEl = document.getElementById('lineOne');
+            const lineTwoEl = document.getElementById('lineTwo');
+            const paraEl = document.getElementById('heroPara');
+
+            let currentIndex = 0;
+
+            function applyCategory(index) {
+                const next = categories[index];
+
+                heading.classList.remove('is-active');
+                heading.classList.add('is-leaving');
+                paraEl.classList.add('is-fading');
+
+
+                setTimeout(() => {
+                    lineOneEl.textContent = next.lineOne;
+                    lineTwoEl.textContent = next.lineTwo;
+
+                    heading.classList.remove('is-leaving');
+                    void heading.offsetWidth;
+                    heading.classList.add('is-active');
+                }, HEADING_EXIT_DURATION);
+
+                setTimeout(() => {
+                    paraEl.textContent = next.para;
+                    void paraEl.offsetWidth;
+                    paraEl.classList.remove('is-fading');
+                }, PARA_FADE_OUT_DURATION);
+            }
+
+            function scheduleLoop() {
+                SWITCH_TIMES_MS.slice(1).forEach((timeMs) => {
+                    setTimeout(() => {
+                        currentIndex = (currentIndex + 1) % categories.length;
+                        applyCategory(currentIndex);
+                    }, timeMs);
+                });
+
+                setTimeout(() => {
+                    currentIndex = 0;
+                    applyCategory(currentIndex);
+                    scheduleLoop();
+                }, LOOP_DURATION_MS);
+            }
+
+            scheduleLoop();
         </script>
     </body>
 
