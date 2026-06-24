@@ -1,0 +1,331 @@
+/* ============================================================
+   HD — 992px to 1366px (720p / 768p laptops & small desktops)
+   Overrides only; does not affect Full HD+ or mobile layouts.
+   ============================================================ */
+
+@media screen and (min-width: 992px) and (max-width: 1366px) {
+
+    /* Header */
+    .main-header {
+        top: 24px;
+    }
+
+    .header-container {
+        width: 92%;
+        padding: 10px 18px;
+        border-radius: 16px;
+    }
+
+    .desktop-nav ul {
+        gap: 24px;
+    }
+
+    .desktop-nav a {
+        font-size: 15px;
+    }
+
+    .desktop-nav a.active::after {
+        bottom: -10px;
+    }
+
+    .logo img {
+        height: 46px;
+    }
+
+    .contact-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 12px;
+    }
+
+    /* Hero */
+    .hero-content {
+        width: 92%;
+    }
+
+    .hero-info {
+        max-width: 480px;
+    }
+
+    .hero-info h1 .line {
+        font-size: 2.35rem;
+    }
+
+    .hero-info p {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .hero-bottom-card {
+        gap: 28px;
+        padding: 22px 24px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        min-width: 120px;
+        height: 44px;
+        font-size: 14px;
+    }
+
+    /* About */
+    .about-highlight-section {
+        padding: 4% 0;
+    }
+
+    .about-highlight-container {
+        width: 92%;
+        gap: 48px;
+    }
+
+    .about-left h2 {
+        font-size: 32px;
+        line-height: 1.25;
+    }
+
+    .section-tag h2 {
+        font-size: 1.75rem;
+    }
+
+    .about-right p {
+        font-size: 1.05rem;
+        margin-bottom: 32px;
+    }
+
+    .explore-btn {
+        min-width: 220px;
+        height: 56px;
+        font-size: 15px;
+    }
+
+    /* Services */
+    .services-section {
+        padding: 24px 0;
+    }
+
+    .services-section .container {
+        width: 92%;
+        min-height: 640px;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+    }
+
+    .service-card {
+        gap: 48px;
+        padding: 28px;
+        border-radius: 36px;
+        top: 8%;
+    }
+
+    .service-image {
+        flex: 0 0 40%;
+    }
+
+    .service-image img {
+        height: 340px;
+        border-radius: 28px;
+    }
+
+    .service-content h3 {
+        font-size: 2rem;
+        margin-bottom: 18px;
+    }
+
+    .service-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+
+    /* Digital */
+    .digital-grid {
+        grid-template-columns: 50% 50%;
+        min-height: 420px;
+    }
+
+    .digital-content {
+        padding: 40px 28px;
+    }
+
+    .digital-content h2 {
+        font-size: clamp(2.8rem, 4vw, 3.6rem);
+        margin-bottom: 18px;
+    }
+
+    .digital-content p {
+        font-size: 13px;
+        max-width: 360px;
+        margin-bottom: 24px;
+    }
+
+    .service-digital-btn {
+        width: 220px;
+        height: 44px;
+        font-size: 15px;
+    }
+
+    .digital-image {
+        height: 420px;
+    }
+
+    /* Projects */
+    .projects-section {
+        padding: 80px 0;
+    }
+
+    .projects-section .container {
+        max-width: 94%;
+    }
+
+    .projects-wrapper {
+        height: 280vh;
+    }
+
+    .cards-pin {
+        height: 540px;
+        top: 80px;
+        border-radius: 32px;
+    }
+
+    .project-card {
+        height: 540px;
+        grid-template-columns: 44% 56%;
+        border-radius: 32px;
+    }
+
+    .project-content {
+        padding: 32px;
+    }
+
+    .project-content span {
+        font-size: 22px;
+        margin-bottom: 28px;
+    }
+
+    .project-content h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .project-content p {
+        font-size: 16px;
+    }
+
+    /* Testimonials */
+    .testimonial-section {
+        padding: 60px 40px;
+        min-height: auto;
+    }
+
+    .testimonial-left {
+        width: 46%;
+    }
+
+    .testimonial-right {
+        width: 44%;
+        height: 500px;
+    }
+
+    .testimonial-label {
+        margin-bottom: 36px;
+    }
+
+    .testimonial-label h3 {
+        font-size: 36px;
+    }
+
+    .testimonial-left h2 {
+        font-size: 32px;
+    }
+
+    .testimonial-left p {
+        font-size: 16px;
+        margin-top: 48px;
+    }
+
+    .testimonial-card {
+        padding: 24px;
+        gap: 18px;
+        min-height: 160px;
+    }
+
+    .testimonial-card img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .content h4 {
+        font-size: 24px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .quote-icon {
+        font-size: 34px;
+    }
+
+    /* Clients & Contact */
+    .clients-box {
+        padding: 20px 40px;
+        border-radius: 24px;
+    }
+
+    .clients-title {
+        font-size: 20px;
+        margin-bottom: 28px;
+    }
+
+    .clients-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px 40px;
+    }
+
+    .clients-grid img {
+        max-width: 130px;
+    }
+
+    .contact-box {
+        padding: 32px 24px 24px;
+        border-radius: 20px;
+    }
+
+    .contact-left h2 {
+        font-size: 44px;
+    }
+
+    .contact-image-slider,
+    .contact-image-slider .slick-slide,
+    .contact-image-slider img {
+        height: 300px;
+        border-radius: 24px;
+    }
+
+    .submit-btn {
+        width: 220px;
+        height: 44px;
+        font-size: 15px;
+    }
+
+    /* Footer */
+    .footer-section {
+        padding: 32px 36px 18px;
+    }
+
+    .footer-content {
+        gap: 48px;
+    }
+
+    .footer-column h4 {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,701 @@
+/* ============================================================
+   MOBILE & TABLET — up to 991px
+   Loaded last so it only overrides at smaller breakpoints.
+   Desktop / HD / Full HD views above 992px remain unchanged.
+   ============================================================ */
+
+/* ── Tablet landscape & small laptop collapse ── */
+@media screen and (max-width: 991px) {
+
+    /* Header */
+    .main-header {
+        top: 16px;
+    }
+
+    .header-container {
+        width: 94%;
+        padding: 10px 16px;
+        border-radius: 14px;
+    }
+
+    .logo img {
+        height: 42px;
+    }
+
+    .desktop-nav ul {
+        gap: 16px;
+    }
+
+    .desktop-nav a {
+        font-size: 13px;
+    }
+
+    .desktop-nav a.active::after {
+        bottom: -8px;
+        height: 1.5px;
+    }
+
+    .contact-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+        border-radius: 10px;
+        gap: 6px;
+    }
+
+    /* Digital section — stack on tablet */
+    .digital-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .digital-content {
+        padding: 48px 32px;
+        order: 1;
+    }
+
+    .digital-content h2 {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+    }
+
+    .digital-image {
+        height: 320px;
+        order: 2;
+    }
+
+    /* Projects — reduce scroll pin height */
+    .projects-section {
+        padding: 60px 0;
+    }
+
+    .projects-wrapper {
+        height: 250vh;
+    }
+
+    .cards-pin {
+        height: 480px;
+        top: 70px;
+        border-radius: 24px;
+    }
+
+    .project-card {
+        height: 480px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        border-radius: 24px;
+    }
+
+    .project-content {
+        padding: 28px;
+    }
+
+    .project-content span {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .project-content h3 {
+        font-size: 26px;
+        margin-bottom: 14px;
+    }
+
+    .project-content p {
+        font-size: 15px;
+    }
+
+    .project-image {
+        min-height: 200px;
+    }
+}
+
+/* ── Tablet portrait ── */
+@media screen and (max-width: 768px) {
+
+    .main-header {
+        top: 12px;
+    }
+
+    /* Hide nav links; keep logo + contact on tablet portrait */
+    .desktop-nav {
+        display: none;
+    }
+
+    .header-container {
+        justify-content: space-between;
+    }
+
+    .contact-btn {
+        padding: 10px 18px;
+    }
+
+    .about-highlight-section {
+        padding: 60px 0;
+    }
+
+    .about-highlight-container {
+        width: 94%;
+        gap: 36px;
+    }
+
+    .about-left h2 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .section-tag h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-tag span,
+    .tag-line {
+        width: 160px;
+    }
+
+    .services-section .container {
+        min-height: 880px;
+    }
+
+    .service-card {
+        top: 140px;
+        padding: 24px;
+        border-radius: 28px;
+        gap: 28px;
+    }
+
+    .service-image img {
+        height: 260px;
+        border-radius: 20px;
+    }
+
+    .service-content h3 {
+        font-size: 1.75rem;
+    }
+
+    .service-content p {
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+    }
+
+    .digital-content {
+        padding: 40px 24px;
+    }
+
+    .digital-content h2 {
+        font-size: clamp(2.2rem, 10vw, 3rem);
+    }
+
+    .digital-image {
+        height: 280px;
+    }
+
+    .projects-wrapper {
+        height: 220vh;
+    }
+
+    .cards-pin {
+        height: auto;
+        min-height: 520px;
+        position: sticky;
+        top: 60px;
+    }
+
+    .project-card {
+        height: auto;
+        min-height: 520px;
+    }
+
+    .testimonial-section {
+        padding: 48px 24px;
+        flex-direction: column;
+        gap: 40px;
+        min-height: auto;
+    }
+
+    .testimonial-left,
+    .testimonial-right {
+        width: 100%;
+    }
+
+    .testimonial-label h3 {
+        font-size: 32px;
+    }
+
+    .testimonial-left h2 {
+        font-size: 28px;
+    }
+
+    .testimonial-left p {
+        margin-top: 32px;
+        font-size: 15px;
+    }
+
+    .testimonial-right {
+        height: 480px;
+    }
+
+    .testimonial-right::before,
+    .testimonial-right::after {
+        height: 120px;
+    }
+
+    .clients-box {
+        padding: 20px 24px;
+        width: 94%;
+        border-radius: 20px;
+    }
+
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 24px;
+    }
+
+    .clients-grid img {
+        max-width: 120px;
+    }
+
+    .contact-footer-section {
+        width: 94%;
+    }
+
+    .contact-box {
+        margin-top: -30px;
+        padding: 28px 20px 24px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .contact-left h2 {
+        font-size: 36px;
+    }
+
+    .contact-image-slider,
+    .contact-image-slider .slick-slide,
+    .contact-image-slider img {
+        height: 260px;
+        border-radius: 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+
+    .footer-section {
+        padding: 28px 20px 16px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+    }
+}
+
+/* ── Mobile phones ── */
+@media screen and (max-width: 576px) {
+
+    .main-header {
+        top: 10px;
+    }
+
+    .header-container {
+        width: 96%;
+        padding: 8px 12px;
+    }
+
+    .logo img {
+        height: 36px;
+    }
+
+    .contact-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .contact-btn i {
+        font-size: 12px;
+    }
+
+    /* Hero */
+    .hero-banner {
+        min-height: 100svh;
+    }
+
+    .slide {
+        height: 100svh;
+    }
+
+    .hero-content {
+        width: 96%;
+        min-height: 100svh;
+        padding-bottom: 16px;
+    }
+
+    .hero-bottom-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        padding: 18px 16px;
+        border-top-left-radius: 18px;
+        border-top-right-radius: 18px;
+    }
+
+    .hero-info {
+        max-width: 100%;
+    }
+
+    .hero-info h1 .line {
+        font-size: 1.85rem;
+    }
+
+    .hero-info p {
+        font-size: 0.9rem;
+        line-height: 1.65;
+    }
+
+    .hero-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        min-width: unset;
+        height: 44px;
+        font-size: 14px;
+    }
+
+    /* About */
+    .about-highlight-section {
+        padding: 48px 0;
+    }
+
+    .about-highlight-container {
+        width: 96%;
+        gap: 28px;
+    }
+
+    .about-left h2 {
+        font-size: 1.65rem;
+    }
+
+    .section-tag {
+        margin-bottom: 20px;
+    }
+
+    .section-tag h2 {
+        font-size: 1.35rem;
+        margin-bottom: 12px;
+    }
+
+    .about-right p {
+        font-size: 0.9rem;
+        margin-bottom: 24px;
+    }
+
+    .explore-btn {
+        width: 100%;
+        min-width: unset;
+        height: 52px;
+        font-size: 14px;
+        border-radius: 12px;
+    }
+
+    /* Services */
+    .services-section {
+        padding: 20px 0;
+    }
+
+    .services-section .container {
+        width: 96%;
+        min-height: 720px;
+    }
+
+    .section-header {
+        margin-bottom: 28px;
+    }
+
+    .section-header h2 {
+        font-size: 22px;
+    }
+
+    .section-header span {
+        width: 140px;
+    }
+
+    .service-card {
+        top: 100px;
+        padding: 18px;
+        border-radius: 22px;
+        gap: 20px;
+    }
+
+    .service-image {
+        border-radius: 18px;
+    }
+
+    .service-image img {
+        height: 200px;
+        border-radius: 18px;
+    }
+
+    .service-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+
+    .service-content p {
+        font-size: 0.875rem;
+        margin-bottom: 20px;
+    }
+
+    /* Digital */
+    .digital-content {
+        padding: 32px 20px;
+    }
+
+    .digital-content h2 {
+        font-size: clamp(1.9rem, 11vw, 2.6rem);
+        line-height: 1;
+    }
+
+    .digital-content p {
+        font-size: 12px;
+        max-width: 100%;
+    }
+
+    .service-digital-btn {
+        width: 100%;
+        height: 44px;
+        font-size: 14px;
+    }
+
+    .digital-image {
+        height: 220px;
+    }
+
+    /* Projects */
+    .projects-section {
+        padding: 40px 0;
+    }
+
+    .projects-section .container {
+        max-width: 96%;
+    }
+
+    .projects-wrapper {
+        height: 200vh;
+    }
+
+    .cards-pin {
+        min-height: 460px;
+        top: 50px;
+        border-radius: 18px;
+    }
+
+    .project-card {
+        min-height: 460px;
+        border-radius: 18px;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+    .project-content span {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .project-content h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .project-content p {
+        font-size: 14px;
+    }
+
+    /* Testimonials */
+    .testimonial-section {
+        padding: 36px 16px;
+        gap: 32px;
+    }
+
+    .testimonial-label {
+        margin-bottom: 24px;
+    }
+
+    .testimonial-label h3 {
+        font-size: 26px;
+    }
+
+    .testimonial-label span {
+        width: 140px;
+    }
+
+    .testimonial-left h2 {
+        font-size: 22px;
+    }
+
+    .testimonial-left p {
+        margin-top: 24px;
+        font-size: 14px;
+    }
+
+    .testimonial-right {
+        height: 400px;
+    }
+
+    .testimonial-card {
+        padding: 16px;
+        gap: 12px;
+        min-height: 140px;
+        flex-wrap: wrap;
+    }
+
+    .testimonial-card img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .content h4 {
+        font-size: 18px;
+    }
+
+    .content p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .quote-icon {
+        font-size: 28px;
+    }
+
+    /* Clients & Contact */
+    .clients-box {
+        padding: 16px;
+        width: 96%;
+    }
+
+    .clients-title {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .clients-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .clients-grid img {
+        max-width: 100px;
+    }
+
+    .contact-footer-section {
+        width: 96%;
+    }
+
+    .contact-box {
+        padding: 24px 16px 20px;
+        border-radius: 16px;
+    }
+
+    .contact-left h2 {
+        font-size: 28px;
+    }
+
+    .contact-left p {
+        font-size: 11px;
+    }
+
+    .contact-image-slider,
+    .contact-image-slider .slick-slide,
+    .contact-image-slider img {
+        height: 220px;
+        border-radius: 16px;
+    }
+
+    .form-group label {
+        font-size: 10px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%  !important;
+        border: 1px solid #c8bda5;
+        background: #f4f1e9;
+        border-radius: 7px;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .checkbox-area span {
+        font-size: 9px;
+    }
+
+    /* Footer */
+    .footer-section {
+        padding: 24px 16px 14px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .footer-column h4 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .footer-column p,
+    .footer-column a {
+        font-size: 12px;
+    }
+
+    .copyright {
+        font-size: 9px;
+    }
+}
+
+/* ── Very small phones (320–375px) ── */
+@media screen and (max-width: 375px) {
+
+    .hero-info h1 .line {
+        font-size: 1.65rem;
+    }
+
+    .about-left h2 {
+        font-size: 1.45rem;
+    }
+
+    .service-content h3 {
+        font-size: 1.35rem;
+    }
+
+    .digital-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .project-content h3 {
+        font-size: 20px;
+    }
+
+    .contact-left h2 {
+        font-size: 24px;
+    }
+}

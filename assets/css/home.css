@@ -372,9 +372,8 @@
 .about-left h2 {
     margin: 0;
     color: #fff;
-    font-size: 32px;
-    font-weight: 300;
-    letter-spacing: -2px;
+    font-size: 40px;
+    font-weight: 600;
 }
 
 .about-right {
@@ -694,7 +693,7 @@
 
     line-height: .9;
 
-    letter-spacing:0px;
+    letter-spacing: 0px;
 
     text-transform: none;
 }

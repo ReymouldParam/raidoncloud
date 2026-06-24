@@ -1,0 +1,137 @@
+/* ============================================================
+   MAC DEVICES — MacBook Air/Pro, iMac & Retina displays
+   Targets WebKit/Safari on common Mac viewport sizes.
+   Does not alter standard Windows/Linux desktop layouts.
+   ============================================================ */
+
+/* MacBook Air 13" / Pro 13" — 1280–1440 logical px */
+@supports (-webkit-hyphens: none) {
+    @media screen and (min-width: 1280px) and (max-width: 1440px) {
+
+        .header-container {
+            width: 90%;
+        }
+
+        .hero-info h1 .line {
+            font-size: 2.5rem;
+        }
+
+        .about-highlight-container,
+        .hero-content,
+        .services-section .container {
+            width: 90%;
+        }
+
+        .service-card {
+            gap: 52px;
+        }
+
+        .service-image img {
+            height: 360px;
+        }
+
+        .digital-content h2 {
+            font-size: clamp(3rem, 4.2vw, 4rem);
+        }
+
+        .cards-pin,
+        .project-card {
+            height: 560px;
+        }
+
+        .testimonial-section {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+}
+
+/* MacBook Pro 14"/16" & iMac 24" — 1441–1728 logical px */
+@supports (-webkit-hyphens: none) {
+    @media screen and (min-width: 1441px) and (max-width: 1728px) {
+
+        .header-container {
+            width: 87%;
+        }
+
+        .hero-content,
+        .about-highlight-container {
+            width: 87%;
+        }
+
+        .hero-bottom-card {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .header-container {
+            backdrop-filter: blur(18px) saturate(180%);
+            -webkit-backdrop-filter: blur(18px) saturate(180%);
+        }
+    }
+}
+
+/* Retina Mac — sharper rendering & safe-area insets */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi) {
+
+    @media screen and (min-width: 992px) and (max-width: 1680px) {
+
+        .hero-info h1 .line,
+        .about-left h2,
+        .section-header h2,
+        .digital-content h2 {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .hero-bottom-card,
+        .header-container {
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .service-card,
+        .project-card,
+        .testimonial-card {
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+        }
+    }
+}
+
+/* Mac notch / safe-area (MacBook with camera notch in fullscreen) */
+@supports (padding: env(safe-area-inset-top)) {
+    @media screen and (min-width: 992px) {
+
+        .main-header {
+            top: calc(24px + env(safe-area-inset-top, 0px));
+        }
+
+        body {
+            padding-left: env(safe-area-inset-left, 0px);
+            padding-right: env(safe-area-inset-right, 0px);
+        }
+    }
+}
+
+/* Safari-specific flex/grid fixes on Mac */
+@supports (-webkit-touch-callout: none) {
+    @media screen and (min-width: 992px) and (max-width: 1680px) {
+
+        .banner-track {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        .hero-bottom-card {
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .digital-grid {
+            min-height: -webkit-fill-available;
+        }
+
+        .testimonial-section {
+            -webkit-box-align: center;
+        }
+    }
+}
