@@ -96,7 +96,7 @@
   }
 
   .hero-heading-wrap h1 {
-      font-weight: 700;
+      font-weight: 500;
       font-size: 50px;
       color: #ffffff;
       margin-bottom: 12px;
@@ -129,7 +129,7 @@
   }
 
   .capabilities .label {
-      font-weight: 700;
+      font-weight: 500;
       font-size: 24px;
       color: #ffffff;
       border-bottom: 2px solid #f2b705;
