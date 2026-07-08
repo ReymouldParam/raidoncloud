@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Raidon Cloud | Honme </title>
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/projects.css" />
+    <!-- Responsive overrides (loaded after base styles; desktop view unchanged) -->
+    <link rel="stylesheet" href="./assets/css/responsive/full-hd.css" />
+    <link rel="stylesheet" href="./assets/css/responsive/hd.css" />
+    <link rel="stylesheet" href="./assets/css/responsive/mac.css" />
+    <link rel="stylesheet" href="./assets/css/responsive/mobile.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <header class="main-header">
+            <div class="header-container">
+                <a href="/" class="logo">
+                    <img src="./assets/images/website-logo.png" alt="Ecoraidon">
+                </a>
+
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a class="active" href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Testimonial</a></li>
+                    </ul>
+                </nav>
+
+                <a href="#" class="contact-btn">
+                    Contact Us
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </header>
+
+        <div class="projects-hero">
+            <div class="projects-hero-bg"></div>
+            <div class="projects-hero-overlay"></div>
+            <div class="projects-hero-content">
+                <div class="projects-hero-text">
+                    <h1>Real Projects<br>Real Results</h1>
+                    <p>A selection of enterprise transformations and digital solutions delivered across industries and
+                        geographies.</p>
+                </div>
+            </div>
+        </div>
+        <section class="our-work-section">
+            <h2 class="our-work-heading">Our Work</h2>
+
+            <div class="work-tabs" id="workTabs"></div>
+
+            <div class="work-card">
+                <div class="work-card-text" id="workCardText"></div>
+                <div class="work-card-image" id="workCardImage"></div>
+            </div>
+
+            <div class="work-dots" id="workDots"></div>
+        </section>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./assets/css/js/home.js"></script>
+
+    <script>
+        (function () {
+            const ourWorkProjects = [
+                {
+                    title: "Enterprise AI Copilot",
+                    description: "Built and deployed a generative AI copilot embedded across internal workflows for a global enterprise — cutting manual research and documentation time significantly while improving decision speed across departments.",
+                    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1000&q=80"
+                },
+                {
+                    title: "Multi-Cloud Migration",
+                    description: "Led a full multi-cloud migration for a large enterprise client, moving legacy on-premise workloads to a resilient multi-cloud architecture with zero downtime and a measurable reduction in infrastructure costs.",
+                    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1000&q=80"
+                },
+                {
+                    title: "SOC Implementation",
+                    description: "Designed and implemented a 24/7 Security Operations Center for a financial services firm, covering threat detection, incident response, and compliance monitoring across their global infrastructure.",
+                    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1000&q=80"
+                },
+                {
+                    title: "Oracle Fusion Finance Rollout",
+                    description: "Full Oracle Fusion Finance & Procurement implementation for a retail group across 5 countries — delivered on time with full team training and hypercare support. Full Oracle Fusion Finance & Procurement implementation for a retail group across 5 countries — delivered on time with full team training and hypercare support.",
+                    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1000&q=80"
+                },
+                {
+                    title: "Retail Data Platform Modernization",
+                    description: "Rebuilt a fragmented retail data landscape into a unified, cloud-native data platform, enabling real-time analytics and predictive insights across supply chain and customer experience teams.",
+                    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1000&q=80"
+                }
+            ];
+
+            const ourWorkTabsEl = document.getElementById('workTabs');
+            const ourWorkCardTextEl = document.getElementById('workCardText');
+            const ourWorkCardImageEl = document.getElementById('workCardImage');
+            const ourWorkDotsEl = document.getElementById('workDots');
+
+            let ourWorkCurrentIndex = 0;
+            let ourWorkAutoplayTimer = null;
+            const OUR_WORK_SLIDE_DURATION = 5000;
+
+            function ourWorkRenderTabs() {
+                ourWorkTabsEl.innerHTML = ourWorkProjects.map((p, i) => `
+      <div class="work-tab ${i === ourWorkCurrentIndex ? 'is-active' : ''} ${i < ourWorkCurrentIndex ? 'is-done' : ''}" data-index="${i}">
+        <div class="tab-label">${p.title}</div>
+        <div class="tab-track"><div class="tab-fill"></div></div>
+      </div>
+    `).join('');
+
+                ourWorkTabsEl.querySelectorAll('.work-tab').forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        ourWorkGoToSlide(parseInt(tab.getAttribute('data-index'), 10));
+                    });
+                });
+            }
+
+            function ourWorkRenderDots() {
+                ourWorkDotsEl.innerHTML = ourWorkProjects.map((_, i) => `
+      <div class="work-dot ${i === ourWorkCurrentIndex ? 'is-active' : ''}" data-index="${i}"></div>
+    `).join('');
+
+                ourWorkDotsEl.querySelectorAll('.work-dot').forEach(dot => {
+                    dot.addEventListener('click', () => {
+                        ourWorkGoToSlide(parseInt(dot.getAttribute('data-index'), 10));
+                    });
+                });
+            }
+
+            function ourWorkRenderCard() {
+                const p = ourWorkProjects[ourWorkCurrentIndex];
+
+                const textInner = document.createElement('div');
+                textInner.className = 'work-card-text-inner';
+                textInner.innerHTML = `<h3>${p.title}</h3><p>${p.description}</p>`;
+                ourWorkCardTextEl.innerHTML = '';
+                ourWorkCardTextEl.appendChild(textInner);
+                requestAnimationFrame(() => textInner.classList.add('visible'));
+
+                const imageInner = document.createElement('div');
+                imageInner.className = 'work-card-image-inner';
+                imageInner.style.backgroundImage = `url('${p.image}')`;
+                ourWorkCardImageEl.innerHTML = '';
+                ourWorkCardImageEl.appendChild(imageInner);
+                requestAnimationFrame(() => imageInner.classList.add('visible'));
+            }
+
+            function ourWorkGoToSlide(index) {
+                ourWorkCurrentIndex = index;
+                ourWorkRenderTabs();
+                ourWorkRenderDots();
+                ourWorkRenderCard();
+                ourWorkRestartAutoplay();
+            }
+
+            function ourWorkNextSlide() {
+                ourWorkCurrentIndex = (ourWorkCurrentIndex + 1) % ourWorkProjects.length;
+                ourWorkRenderTabs();
+                ourWorkRenderDots();
+                ourWorkRenderCard();
+            }
+
+            function ourWorkRestartAutoplay() {
+                if (ourWorkAutoplayTimer) clearInterval(ourWorkAutoplayTimer);
+                ourWorkAutoplayTimer = setInterval(ourWorkNextSlide, OUR_WORK_SLIDE_DURATION);
+            }
+
+            // Init
+            ourWorkRenderTabs();
+            ourWorkRenderDots();
+            ourWorkRenderCard();
+            ourWorkRestartAutoplay();
+        })();
+    </script>
+</body>
+
+</html>
