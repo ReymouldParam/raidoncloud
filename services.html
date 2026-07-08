@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Raidon Cloud | Honme </title>
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/services.css" />
+    <!-- Responsive overrides (loaded after base styles; desktop view unchanged) -->
+    <link rel="stylesheet" href="./assets/css/responsive/full-hd.css" />
+    <link rel="stylesheet" href="./assets/css/responsive/hd.css" />
+    <link rel="stylesheet" href="./assets/css/responsive/mac.css" />
+    <link rel="stylesheet" href="./assets/css/responsive/mobile.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <header class="main-header">
+            <div class="header-container">
+                <a href="/" class="logo">
+                    <img src="./assets/images/website-logo.png" alt="Ecoraidon">
+                </a>
+
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a class="active" href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Testimonial</a></li>
+                    </ul>
+                </nav>
+
+                <a href="#" class="contact-btn">
+                    Contact Us
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </header>
+        <section class="services-hero">
+            <div class="hero-bg-layer" id="heroBgA"></div>
+            <div class="hero-bg-layer" id="heroBgB"></div>
+            <div class="hero-bg-overlay"></div>
+            <div class="grid-overlay"></div>
+            <div class="hero-heading-wrap">
+                <h1 id="heroTitle">AI, Data &amp; Analytics</h1>
+                <p id="heroSubtitle">We help organizations unlock the power of Artificial Intelligence and Data to
+                    accelerate innovation, improve decision-making, automate operations, and create sustainable business
+                    value.</p>
+            </div>
+
+            <div class="hero-content-row">
+                <div class="capabilities">
+                    <span class="label">What We Offer Key Capabilities</span>
+                    <ul id="capabilitiesList"></ul>
+                </div>
+
+                <div class="icon-badge">
+                    <div class="icon-badge-inner">
+                        <span id="badgeLetters">AI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-grid-section">
+            <div class="services-grid" id="servicesGrid"></div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./assets/css/js/home.js"></script>
+
+    <script>
+        const services = [
+            {
+                key: "ai",
+                title: "AI, Data & Analytics",
+                subtitle: "We help organizations unlock the power of Artificial Intelligence and Data to accelerate innovation, improve decision-making, automate operations, and create sustainable business value.",
+                bgImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1800&q=80",
+                badge: "AI",
+                cardTitle: "AI, Data & Analytics",
+                capabilities: [
+                    "Generative AI & Enterprise Copilots",
+                    "AI Agents & Intelligent Assistants",
+                    "Knowledge Management & Document Intelligence",
+                    "Data Engineering & Modernization",
+                    "Business Intelligence & Analytics",
+                    "Predictive Analytics & Machine Learning"
+                ]
+            },
+            {
+                key: "cloud",
+                title: "Cloud Services",
+                subtitle: "We design, migrate, and manage cloud environments that give your business the scalability, resilience, and cost-efficiency it needs to grow without limits.",
+                bgImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1800&q=80",
+                badge: "CS",
+                cardTitle: "Cloud Services",
+                capabilities: [
+                    "Cloud Strategy & Advisory",
+                    "Migration & Modernization",
+                    "Multi-cloud & Hybrid Architecture",
+                    "Cost Optimization & FinOps",
+                    "Infrastructure as Code",
+                    "24/7 Cloud Operations & Support"
+                ]
+            },
+            {
+                key: "cyber",
+                title: "Cyber Security",
+                subtitle: "We embed security, governance, and compliance into every layer of your technology stack, protecting your business from evolving threats without slowing you down.",
+                bgImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1800&q=80",
+                badge: "CY",
+                cardTitle: "Cyber Security",
+                capabilities: [
+                    "Security Architecture & Design",
+                    "Threat Detection & Response",
+                    "Identity & Access Management",
+                    "Compliance & Risk Management",
+                    "Vulnerability & Penetration Testing",
+                    "Zero Trust Implementation"
+                ]
+            },
+            {
+                key: "apps",
+                title: "Enterprise Apps",
+                subtitle: "We build and modernize enterprise applications that streamline operations, connect teams, and give your business the agility to respond to change.",
+                bgImage: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1800&q=80",
+                badge: "EA",
+                cardTitle: "Enterprise Apps",
+                capabilities: [
+                    "ERP & CRM Implementation",
+                    "Custom Enterprise Software",
+                    "Application Modernization",
+                    "Workflow Automation",
+                    "Systems Integration",
+                    "Ongoing App Support & Maintenance"
+                ]
+            },
+            {
+                key: "dev",
+                title: "Development",
+                subtitle: "We design and engineer robust, scalable software products end-to-end, from architecture to deployment, tailored to your business goals.",
+                bgImage: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?auto=format&fit=crop&w=1800&q=80",
+                badge: "DV",
+                cardTitle: "Development",
+                capabilities: [
+                    "Web & Mobile App Development",
+                    "API & Microservices Architecture",
+                    "Full-stack Product Engineering",
+                    "DevOps & CI/CD Pipelines",
+                    "Quality Engineering & Testing",
+                    "Legacy System Re-engineering"
+                ]
+            }
+        ];
+
+        const heroTitle = document.getElementById('heroTitle');
+        const heroSubtitle = document.getElementById('heroSubtitle');
+        const capabilitiesList = document.getElementById('capabilitiesList');
+        const badgeLetters = document.getElementById('badgeLetters');
+        const servicesGrid = document.getElementById('servicesGrid');
+        const heroBgA = document.getElementById('heroBgA');
+        const heroBgB = document.getElementById('heroBgB');
+        let bgLayerToggle = false;
+
+        function preload(url) {
+            return new Promise(resolve => {
+                const img = new Image();
+                img.onload = resolve;
+                img.onerror = resolve;
+                img.src = url;
+            });
+        }
+
+        async function setHeroBackground(url) {
+            await preload(url);
+            const showLayer = bgLayerToggle ? heroBgB : heroBgA;
+            const hideLayer = bgLayerToggle ? heroBgA : heroBgB;
+            showLayer.style.backgroundImage = `url('${url}')`;
+            showLayer.classList.add('visible');
+            hideLayer.classList.remove('visible');
+            bgLayerToggle = !bgLayerToggle;
+        }
+
+        function checkIconSVG() {
+            return `<svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+        }
+
+        function arrowSVG() {
+            return `<svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>`;
+        }
+
+        function renderHero(service) {
+            setHeroBackground(service.bgImage);
+
+            heroTitle.classList.remove('fade-update');
+            heroSubtitle.classList.remove('fade-update');
+            void heroTitle.offsetWidth;
+
+            heroTitle.textContent = service.title;
+            heroSubtitle.textContent = service.subtitle;
+            badgeLetters.textContent = service.badge;
+
+            heroTitle.classList.add('fade-update');
+            heroSubtitle.classList.add('fade-update');
+
+            capabilitiesList.innerHTML = service.capabilities.map((cap, i) =>
+                `<li style="animation-delay:${i * 0.06}s">${checkIconSVG()}<span>${cap}</span></li>`
+            ).join('');
+        }
+
+        function renderCards(activeKey) {
+            servicesGrid.innerHTML = services.map(s => `
+      <div class="service-card ${s.key === activeKey ? 'active' : ''}" data-key="${s.key}">
+        <div class="card-text">
+          <h4>${s.cardTitle}</h4>
+          <p>From cloud strategy to full migration... <span class="more">More</span></p>
+        </div>
+        <div class="card-arrow">${arrowSVG()}</div>
+      </div>
+    `).join('');
+
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const key = card.getAttribute('data-key');
+                    const service = services.find(s => s.key === key);
+                    renderHero(service);
+                    renderCards(key);
+                    document.querySelector('.services-hero').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+        }
+
+        // Init
+        renderHero(services[0]);
+        renderCards(services[0].key);
+    </script>
+
+</body>
+
+</html>

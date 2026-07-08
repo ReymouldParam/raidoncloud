@@ -1,0 +1,366 @@
+  /* ===================== HERO ===================== */
+  .services-hero {
+      position: relative;
+      width: 100%;
+      background: #0a0e27;
+      padding-bottom: 90px;
+      overflow: hidden;
+  }
+
+  .grid-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background-image:
+          linear-gradient(rgba(120, 150, 220, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(120, 150, 220, 0.06) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: radial-gradient(ellipse 900px 500px at 50% 10%, #000 40%, transparent 90%);
+      pointer-events: none;
+  }
+
+  /* Background image layers (crossfaded per service) */
+  .hero-bg-layer {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 0.7s ease;
+  }
+
+  .hero-bg-layer.visible {
+      opacity: 1;
+  }
+
+  .hero-bg-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background:
+          radial-gradient(ellipse 700px 400px at 50% 0%,
+              rgba(20, 24, 48, 0.30) 0%,
+              rgba(6, 8, 21, 0.50) 70%),
+          linear-gradient(180deg,
+              rgba(10, 14, 39, 0.50) 0%,
+              rgba(6, 8, 21, 0.82) 75%,
+              #060815 100%);
+      pointer-events: none;
+  }
+
+
+
+  /* Cube graphic */
+  .cube-wrap {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+  }
+
+  .cube {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+
+      0%,
+      100% {
+          transform: translateY(0);
+      }
+
+      50% {
+          transform: translateY(-8px);
+      }
+  }
+
+  .cube svg {
+      width: 100%;
+      height: 100%;
+  }
+
+  /* Hero heading */
+  .hero-heading-wrap {
+      position: relative;
+      z-index: 5;
+      text-align: center;
+      max-width: 640px;
+      margin: 10px auto 0;
+      padding-top: 8%;
+  }
+
+  .hero-heading-wrap h1 {
+      font-weight: 700;
+      font-size: 50px;
+      color: #ffffff;
+      margin-bottom: 12px;
+      transition: opacity 0.25s ease;
+  }
+
+  .hero-heading-wrap p {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: #b7bacb;
+      transition: opacity 0.25s ease;
+  }
+
+  /* Content row: capabilities + icon */
+  .hero-content-row {
+      position: relative;
+      z-index: 5;
+      max-width: 1200px;
+      margin: 50px auto 0;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+  }
+
+  .capabilities {
+      flex: 1;
+      max-width: 560px;
+  }
+
+  .capabilities .label {
+      font-weight: 700;
+      font-size: 24px;
+      color: #ffffff;
+      border-bottom: 2px solid #f2b705;
+      display: inline-block;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+  }
+
+  .capabilities ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+  }
+
+  .capabilities li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14.5px;
+      color: #cfd1de;
+      opacity: 0;
+      transform: translateX(-8px);
+      animation: slideIn 0.4s ease forwards;
+  }
+
+  @keyframes slideIn {
+      to {
+          opacity: 1;
+          transform: translateX(0);
+      }
+  }
+
+  .capabilities li svg {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      margin-top: 2px;
+      stroke: #f2b705;
+  }
+
+  /* Icon badge */
+  .icon-badge {
+      flex-shrink: 0;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+  }
+
+  .icon-badge::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(242, 183, 5, 0.35) 0%, rgba(242, 113, 28, 0.15) 45%, rgba(242, 113, 28, 0) 75%);
+      filter: blur(2px);
+  }
+
+  .icon-badge-inner {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(10, 14, 39, 0.4);
+  }
+
+  .icon-badge-inner span {
+      font-weight: 700;
+      font-size: 22px;
+      color: #ffffff;
+      transition: opacity 0.25s ease;
+  }
+
+  .icon-badge-inner::after {
+      content: '';
+      position: absolute;
+      inset: -18px;
+      border-radius: 50%;
+      background:
+          repeating-conic-gradient(rgba(255, 255, 255, 0.5) 0deg 2deg, transparent 2deg 30deg);
+      -webkit-mask: radial-gradient(circle, transparent 55px, #000 56px, #000 58px, transparent 59px);
+      mask: radial-gradient(circle, transparent 55px, #000 56px, #000 58px, transparent 59px);
+      opacity: 0.6;
+  }
+
+  /* ===================== SERVICES GRID ===================== */
+  .services-grid-section {
+      max-width: 1200px;
+      margin: 50px auto 0;
+      padding: 0 40px 80px;
+  }
+
+  .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+  }
+
+  .service-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: #10142e;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 20px !important;
+      padding: 20px 22px;
+      cursor: pointer;
+      transition: border-color 0.25s ease, transform 0.2s ease, background 0.25s ease;
+  }
+
+  .service-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(242, 183, 5, 0.4);
+  }
+
+  .service-card.active {
+      background: linear-gradient(135deg, rgba(242, 183, 5, 0.12), rgba(242, 113, 28, 0.06));
+      border-color: #f2b705;
+  }
+
+  .service-card .card-text h4 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: #ffffff;
+      margin-bottom: 6px;
+  }
+
+  .service-card .card-text p {
+      font-size: 13px;
+      color: #a9acbd;
+  }
+
+  .service-card .card-text p .more {
+      color: #f2b705;
+      font-weight: 600;
+  }
+
+  .card-arrow {
+      flex-shrink: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255, 255, 255, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  }
+
+  .card-arrow svg {
+      width: 16px;
+      height: 16px;
+      stroke: #ffffff;
+      transition: stroke 0.25s ease;
+  }
+
+  .service-card.active .card-arrow {
+      background: #f2b705;
+      border-color: #f2b705;
+  }
+
+  .service-card.active .card-arrow svg {
+      stroke: #1a1a1a;
+  }
+
+  .service-card:hover .card-arrow {
+      transform: translateX(3px);
+  }
+
+  .service-card.centered {
+      grid-column: 1 / span 1;
+      justify-self: center;
+      width: 100%;
+      max-width: 100%;
+  }
+
+  /* Last row: 5th card centered, spans both columns visually */
+  .services-grid .service-card:nth-child(5) {
+      grid-column: 1 / -1;
+      max-width: 460px;
+      justify-self: center;
+      width: 100%;
+  }
+
+  /* Fade transition helper */
+  .fade-update {
+      animation: fadeUpdate 0.4s ease;
+  }
+
+  @keyframes fadeUpdate {
+      0% {
+          opacity: 0;
+          transform: translateY(6px);
+      }
+
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+      .nav-links {
+          display: none;
+      }
+
+      .hero-content-row {
+          flex-direction: column;
+      }
+
+      .icon-badge {
+          margin-top: 20px;
+      }
+
+      .services-grid {
+          grid-template-columns: 1fr;
+      }
+
+      .services-grid .service-card:nth-child(5) {
+          grid-column: 1 / -1;
+          max-width: 100%;
+      }
+  }

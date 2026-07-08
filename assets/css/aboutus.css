@@ -1,0 +1,539 @@
+@import url(https://db.onlinewebfonts.com/c/33d2ace98dd5231182427e6acc4bc372?family=Right+Grotesk+Medium);
+
+.hero-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    background-color: #0a0e27;
+}
+
+/* Background image */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/aboutus-banner-bg.jpg');
+    background-size: cover;
+    background-position: center top;
+}
+
+/* Dark overlay: solid navy on the left fading to transparent on the right */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            #0a0e27 0%,
+            rgba(10, 14, 39, 0.92) 25%,
+            rgba(10, 14, 39, 0.55) 45%,
+            rgba(10, 14, 39, 0.15) 65%,
+            rgba(10, 14, 39, 0) 80%);
+}
+
+/* ===== Hero content ===== */
+.hero-banner-content {
+    position: relative;
+    z-index: 5;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 130px 70px 150px;
+}
+
+.hero-banner-content h1 {
+    font-weight: 500;
+    font-family: "Right Grotesk Medium";
+    font-size: 52px;
+    line-height: 1.15;
+    color: #ffffff;
+    max-width: 620px;
+}
+
+.hero-banner-content p {
+    margin-top: 26px;
+    max-width: 520px;
+    font-family: "Poppins";
+    font-size: 17px;
+    /* line-height: 1.6; */
+    color: #d7d9e4;
+    font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 14px 18px;
+    }
+
+    .hero-content {
+        padding: 90px 20px 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+}
+
+/* *******************About us  */
+.testimonial-section {
+    position: relative;
+    width: 100%;
+    padding: 60px 60px;
+    background: linear-gradient(115deg, #b5813f 0%, #6b4a6e 28%, #4b3566 50%, #3a2a6b 70%, #4c2f8f 100%);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    overflow: hidden;
+}
+
+/* Avatar */
+.avatar {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Content */
+.testimonial-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.testimonial-quote {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #f2f0f8;
+    max-width: 900px;
+}
+
+.testimonial-footer {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    gap: 20%;
+}
+
+.author-info .name {
+    font-weight: 700;
+    font-size: 17px;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.author-info .role {
+    font-size: 15px;
+    color: #d9d3e8;
+    font-weight: 400;
+}
+
+/* Nav buttons */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav-btn {
+    width: 100px;
+    height: 44px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+}
+
+.nav-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.nav-btn.prev {
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+}
+
+.nav-btn.prev svg {
+    stroke: #ffffff;
+}
+
+.nav-btn.next {
+    background: linear-gradient(135deg, #ffc93c, #f2a71c);
+}
+
+.nav-btn.next svg {
+    stroke: #1a1a1a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonial-section {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 24px;
+    }
+
+    .testimonial-quote {
+        font-size: 18px;
+    }
+
+    .testimonial-footer {
+        width: 100%;
+    }
+}
+
+/* *************************** Who we are  */
+
+.who-we-are {
+    position: relative;
+    width: 100%;
+    background: #0a0e27;
+    background: radial-gradient(ellipse 900px 400px at 5% 0%, rgba(120, 60, 160, 0.35) 0%, rgba(10, 14, 39, 0) 60%), #0a0e27;
+    padding: 50px 60px 20px;
+    overflow: hidden;
+}
+
+/* Section label */
+.section-label {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.section-label span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.section-label .underline {
+    width: 190px;
+    height: 2px;
+    background: linear-gradient(90deg, #f2b705, rgba(242, 183, 5, 0));
+    border-radius: 2px;
+}
+
+/* Top row: text + image */
+.who-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.who-text {
+    flex: 1;
+    min-width: 320px;
+    max-width: 660px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.who-text p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #cfd1de;
+    font-weight: 400;
+}
+
+.who-image {
+    flex-shrink: 0;
+    width: 480px;
+    max-width: 100%;
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.who-image img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Heading */
+.who-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+/* Stats */
+.stats-row {
+    display: flex;
+    gap: 130px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 340px;
+}
+
+.stat-number {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 62px;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.stat-desc {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #cfd1de;
+    font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .who-we-are {
+        padding: 40px 24px 60px;
+    }
+
+    .who-top {
+        flex-direction: column;
+    }
+
+    .who-image {
+        width: 100%;
+    }
+
+    .who-heading {
+        font-size: 26px;
+        margin-top: 60px;
+    }
+
+    .stats-row {
+        gap: 50px;
+        margin-top: 50px;
+    }
+
+    .stat-number {
+        font-size: 48px;
+    }
+}
+
+/* ****************** OUR VISON AND MISSION */
+.drives-us {
+    width: 100%;
+    background: #0a0e27;
+    padding: 20px 60px 50px;
+}
+
+/* Section label */
+.section-label {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.section-label span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.section-label .underline {
+    width: 190px;
+    height: 2px;
+    background: linear-gradient(90deg, #f2b705, rgba(242, 183, 5, 0));
+    border-radius: 2px;
+}
+
+/* Grid of items */
+.drives-grid {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+    max-width: 1300px;
+}
+
+.drive-item {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    min-width: 320px;
+    max-width: 560px;
+}
+
+.drive-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 4px;
+}
+
+.drive-icon svg {
+    width: 44px;
+    height: 44px;
+    stroke: #ffffff;
+    fill: none;
+    stroke-width: 1.6;
+}
+
+.drive-content h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.drive-content p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: #cfd1de;
+    font-weight: 400;
+    max-width: 460px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .drives-us {
+        padding: 40px 24px 70px;
+    }
+
+    .drives-grid {
+        gap: 50px;
+    }
+
+    .drive-item {
+        min-width: 100%;
+    }
+}
+
+/* ****************************** OUR PRINCIPLES *************/
+
+.principles-section {
+    width: 100%;
+    background: #0a0e27;
+    padding: 45px 45px 50px;
+}
+
+/* Section label */
+.section-label {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+.section-label span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.section-label .underline {
+    width: 180px;
+    height: 2px;
+    background: linear-gradient(90deg, #f2b705, rgba(242, 183, 5, 0));
+    border-radius: 2px;
+}
+
+/* Grid */
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1300px;
+}
+
+.principle-card {
+    position: relative;
+    border-radius: 18px;
+    padding: 28px 26px 34px;
+    overflow: hidden;
+    height: 280px;
+    background:
+        radial-gradient(ellipse 260px 180px at 50% 100%, rgba(224, 122, 60, 0.45) 0%, rgba(120, 60, 160, 0.35) 45%, rgba(15, 18, 45, 0) 75%),
+        #12152e;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.principle-card h3 {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    background-image: linear-gradient(90deg, #f2b705, rgba(242, 183, 5, 0));
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100% 2px;
+}
+
+.principle-card p {
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: #cfd1de;
+    font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .principles-section {
+        padding: 35px 20px 60px;
+    }
+
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+}
