@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Raidon Cloud | Honme </title>
     <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/home.css" />
     <link rel="stylesheet" href="./assets/css/services.css" />
     <!-- Responsive overrides (loaded after base styles; desktop view unchanged) -->
     <link rel="stylesheet" href="./assets/css/responsive/full-hd.css" />
@@ -71,15 +72,209 @@
 
                 <div class="icon-badge">
                     <div class="icon-badge-inner">
-                        <span id="badgeLetters">AI</span>
+                        <svg viewBox="0 0 200 176" xmlns="http://www.w3.org/2000/svg">
+                            <!-- radiating circuit lines + nodes -->
+                            <line class="bulb-node-line" x1="100" y1="50" x2="100" y2="18" />
+                            <circle class="bulb-node-dot" cx="100" cy="14" r="4" />
+
+                            <line class="bulb-node-line" x1="126.9" y1="61.1" x2="148" y2="39" />
+                            <circle class="bulb-node-dot" cx="151" cy="36" r="4" />
+
+                            <line class="bulb-node-line" x1="138" y1="88" x2="168" y2="88" />
+                            <circle class="bulb-node-dot" cx="172" cy="88" r="4" />
+
+                            <line class="bulb-node-line" x1="126.9" y1="114.9" x2="148" y2="137" />
+                            <circle class="bulb-node-dot" cx="151" cy="140" r="4" />
+
+                            <line class="bulb-node-line" x1="73.1" y1="114.9" x2="52" y2="137" />
+                            <circle class="bulb-node-dot" cx="49" cy="140" r="4" />
+
+                            <line class="bulb-node-line" x1="62" y1="88" x2="32" y2="88" />
+                            <circle class="bulb-node-dot" cx="28" cy="88" r="4" />
+
+                            <line class="bulb-node-line" x1="73.1" y1="61.1" x2="52" y2="39" />
+                            <circle class="bulb-node-dot" cx="49" cy="36" r="4" />
+
+                            <!-- bulb glass -->
+                            <circle class="bulb-outline" cx="100" cy="88" r="42" />
+
+                            <!-- screw base -->
+                            <path class="bulb-outline"
+                                d="M 84 122 L 84 148 Q 84 156 92 156 L 108 156 Q 116 156 116 148 L 116 122" />
+                            <line class="bulb-outline" x1="86" y1="132" x2="114" y2="132" />
+                            <line class="bulb-outline" x1="86" y1="142" x2="114" y2="142" />
+                            <path class="bulb-outline" d="M 92 156 Q 100 164 108 156" />
+
+                            <text class="bulb-label" id="badgeLetters" x="100" y="88">AI</text>
+                        </svg>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="services-grid-section">
-            <div class="services-grid" id="servicesGrid"></div>
+        <section class="rd-services-grid-section">
+            <div class="rd-services-grid" id="servicesGrid"></div>
         </section>
+
+        <section class="contact-footer-section">
+            <!-- CLIENTs -->
+            <div class="clients-box">
+                <h4 class="clients-title">Our Clients</h4>
+                <div class="clients-grid">
+                    <img src="assets/images/client-logo1.png" alt="">
+                    <img src="assets/images/client-logo2.png" alt="">
+                    <img src="assets/images/client-logo3.png" alt="">
+                    <img src="assets/images/client-logo4.png" alt="">
+                    <img src="assets/images/client-logo5.png" alt="">
+                    <img src="assets/images/client-logo6.png" alt="">
+                    <img src="assets/images/client-logo7.png" alt="">
+                    <img src="assets/images/client-logo8.png" alt="">
+                </div>
+            </div>
+            <!-- CONTACT -->
+            <div class="contact-box">
+
+                <div class="contact-top-line"></div>
+
+                <div class="contact-grid">
+
+                    <div class="contact-left">
+
+                        <h2>GET IN TOUCH</h2>
+
+                        <p>
+                            For enquiries or any questions please do not hesitate to contact us.
+                        </p>
+
+                        <div class="contact-image-slider">
+
+                            <div>
+                                <img src="assets/images/vercal-slider-img.jpg" alt="">
+                            </div>
+
+                            <div>
+                                <img src="assets/images/Services-img.jpg" alt="">
+                            </div>
+
+                            <div>
+                                <img src="assets/images/vercal-slider-img.jpg" alt="">
+                            </div>
+
+                            <div>
+                                <img src="assets/images/Services-img.jpg" alt="">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-right">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone Number</label>
+                                    <input type="text" placeholder="Name">
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label>E-Mail*</label>
+                                <input type="email" placeholder="Name">
+                            </div>
+
+                            <div class="form-group">
+                                <label>What Are You Interested In Services</label>
+                                <textarea placeholder="Ex. Design, Development etc."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Type Your Message</label>
+                                <textarea placeholder="Message Here"></textarea>
+                            </div>
+
+                            <div class="checkbox-area">
+
+                                <input type="checkbox">
+
+                                <span>
+                                    By clicking the submit button, you agree to our privacy policy
+                                </span>
+
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                Submit Request
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <footer class="footer-section">
+
+            <div class="footer-top-line"></div>
+
+            <div class="footer-content">
+
+                <div class="footer-column address">
+                    <h4>Address</h4>
+
+                    <p>
+                        H.No. 5-5-35/252/4/plot-23, At<br>
+                        Durga Shakthipuram, Prasanthi<br>
+                        Nagar, IDA Kukatpally, Hyderabad,<br>
+                        Telangana, India-500072
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Email</h4>
+
+                    <a href="#">info@xyz.com</a>
+                    <a href="#">name@xyz.com</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Social Media</h4>
+
+                    <div class="social-icons">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact</h4>
+
+                    <a href="tel:+919966326477">
+                        +91-9966326477
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom-line"></div>
+
+            <div class="copyright">
+                Copyright 2025 xyz | All Rights Reserved | Designed by ReyMould
+            </div>
+
+        </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
@@ -182,7 +377,7 @@
         const servicesGrid = document.getElementById('servicesGrid');
         const heroBgA = document.getElementById('heroBgA');
         const heroBgB = document.getElementById('heroBgB');
-        let bgLayerToggle = false;
+        let bgLayerToggle = false; // false -> A is active/back layer used next, true -> B
 
         function preload(url) {
             return new Promise(resolve => {
@@ -214,16 +409,16 @@
         function renderHero(service) {
             setHeroBackground(service.bgImage);
 
-            heroTitle.classList.remove('fade-update');
-            heroSubtitle.classList.remove('fade-update');
+            heroTitle.classList.remove('rd-fade-update');
+            heroSubtitle.classList.remove('rd-fade-update');
             void heroTitle.offsetWidth;
 
             heroTitle.textContent = service.title;
             heroSubtitle.textContent = service.subtitle;
             badgeLetters.textContent = service.badge;
 
-            heroTitle.classList.add('fade-update');
-            heroSubtitle.classList.add('fade-update');
+            heroTitle.classList.add('rd-fade-update');
+            heroSubtitle.classList.add('rd-fade-update');
 
             capabilitiesList.innerHTML = service.capabilities.map((cap, i) =>
                 `<li style="animation-delay:${i * 0.06}s">${checkIconSVG()}<span>${cap}</span></li>`
@@ -232,16 +427,16 @@
 
         function renderCards(activeKey) {
             servicesGrid.innerHTML = services.map(s => `
-      <div class="service-card ${s.key === activeKey ? 'active' : ''}" data-key="${s.key}">
-        <div class="card-text">
+      <div class="rd-service-card ${s.key === activeKey ? 'rd-active' : ''}" data-key="${s.key}">
+        <div class="rd-card-text">
           <h4>${s.cardTitle}</h4>
-          <p>From cloud strategy to full migration... <span class="more">More</span></p>
+          <p>From cloud strategy to full migration... <span class="rd-more">More</span></p>
         </div>
-        <div class="card-arrow">${arrowSVG()}</div>
+        <div class="rd-card-arrow">${arrowSVG()}</div>
       </div>
     `).join('');
 
-            document.querySelectorAll('.service-card').forEach(card => {
+            document.querySelectorAll('.rd-service-card').forEach(card => {
                 card.addEventListener('click', () => {
                     const key = card.getAttribute('data-key');
                     const service = services.find(s => s.key === key);
