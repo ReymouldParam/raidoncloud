@@ -31,40 +31,40 @@
     <div>
         <header class="main-header">
             <div class="header-container">
-                <a href="/" class="logo">
+                <a href="." class="logo">
                     <img src="./assets/images/website-logo.png" alt="Ecoraidon">
                 </a>
 
                 <nav class="desktop-nav">
                     <ul>
-                        <li><a class="active" href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Blogs</a></li>
-                        <li><a href="#">Testimonial</a></li>
+                        <li><a class="active" href=".">Home</a></li>
+                        <li><a href="./aboutus.html">About</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./projects.html">Projects</a></li>
                     </ul>
                 </nav>
-
-                <a href="#" class="contact-btn">
-                    Contact Us
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
             </div>
         </header>
+
+        <!-- HERO: image + active service title/subtitle only -->
         <section class="services-hero">
             <div class="hero-bg-layer" id="heroBgA"></div>
             <div class="hero-bg-layer" id="heroBgB"></div>
             <div class="hero-bg-overlay"></div>
             <div class="grid-overlay"></div>
+
             <div class="hero-heading-wrap">
                 <h1 id="heroTitle">AI, Data &amp; Analytics</h1>
                 <p id="heroSubtitle">We help organizations unlock the power of Artificial Intelligence and Data to
                     accelerate innovation, improve decision-making, automate operations, and create sustainable business
                     value.</p>
             </div>
+        </section>
 
-            <div class="hero-content-row">
+        <!-- SERVICES CARDS SECTION: now also contains key features (capabilities + icon badge) -->
+        <section class="rd-services-grid-section">
+
+            <div class="key-features-block">
                 <div class="capabilities">
                     <span class="label">What We Offer Key Capabilities</span>
                     <ul id="capabilitiesList"></ul>
@@ -73,45 +73,32 @@
                 <div class="icon-badge">
                     <div class="icon-badge-inner">
                         <svg viewBox="0 0 200 176" xmlns="http://www.w3.org/2000/svg">
-                            <!-- radiating circuit lines + nodes -->
                             <line class="bulb-node-line" x1="100" y1="50" x2="100" y2="18" />
                             <circle class="bulb-node-dot" cx="100" cy="14" r="4" />
-
                             <line class="bulb-node-line" x1="126.9" y1="61.1" x2="148" y2="39" />
                             <circle class="bulb-node-dot" cx="151" cy="36" r="4" />
-
                             <line class="bulb-node-line" x1="138" y1="88" x2="168" y2="88" />
                             <circle class="bulb-node-dot" cx="172" cy="88" r="4" />
-
                             <line class="bulb-node-line" x1="126.9" y1="114.9" x2="148" y2="137" />
                             <circle class="bulb-node-dot" cx="151" cy="140" r="4" />
-
                             <line class="bulb-node-line" x1="73.1" y1="114.9" x2="52" y2="137" />
                             <circle class="bulb-node-dot" cx="49" cy="140" r="4" />
-
                             <line class="bulb-node-line" x1="62" y1="88" x2="32" y2="88" />
                             <circle class="bulb-node-dot" cx="28" cy="88" r="4" />
-
                             <line class="bulb-node-line" x1="73.1" y1="61.1" x2="52" y2="39" />
                             <circle class="bulb-node-dot" cx="49" cy="36" r="4" />
-
-                            <!-- bulb glass -->
                             <circle class="bulb-outline" cx="100" cy="88" r="42" />
-
-                            <!-- screw base -->
                             <path class="bulb-outline"
                                 d="M 84 122 L 84 148 Q 84 156 92 156 L 108 156 Q 116 156 116 148 L 116 122" />
                             <line class="bulb-outline" x1="86" y1="132" x2="114" y2="132" />
                             <line class="bulb-outline" x1="86" y1="142" x2="114" y2="142" />
                             <path class="bulb-outline" d="M 92 156 Q 100 164 108 156" />
-
                             <text class="bulb-label" id="badgeLetters" x="100" y="88">AI</text>
                         </svg>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="rd-services-grid-section">
+
             <div class="rd-services-grid" id="servicesGrid"></div>
         </section>
         <section class="contact-footer-section">
@@ -284,6 +271,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="./assets/css/js/home.js"></script>
 
+
     <script>
         const services = [
             {
@@ -375,7 +363,7 @@
         const servicesGrid = document.getElementById('servicesGrid');
         const heroBgA = document.getElementById('heroBgA');
         const heroBgB = document.getElementById('heroBgB');
-        let bgLayerToggle = false; // false -> A is active/back layer used next, true -> B
+        let bgLayerToggle = false;
 
         function preload(url) {
             return new Promise(resolve => {
