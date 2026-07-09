@@ -274,6 +274,97 @@
         font-size: 34px;
     }
 
+    /* About page (HD) */
+    .about-page .hero-wrapper {
+        min-height: 720px;
+    }
+
+    .about-page .hero-banner-content {
+        width: 92%;
+        padding: 120px 40px 120px;
+    }
+
+    .about-page .hero-banner-content h1 {
+        font-size: 44px;
+        max-width: 560px;
+    }
+
+    .about-page .hero-banner-content p {
+        font-size: 16px;
+        max-width: 500px;
+        margin-top: 22px;
+    }
+
+    .about-page .testimonial-section {
+        padding: 48px 40px;
+        gap: 32px;
+    }
+
+    .about-page .avatar {
+        width: 130px;
+        height: 130px;
+    }
+
+    .about-page .testimonial-quote {
+        font-size: 20px;
+        max-width: 780px;
+    }
+
+    .about-page .who-we-are,
+    .about-page .drives-us,
+    .about-page .principles-section {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .about-page .who-top {
+        gap: 38px;
+    }
+
+    .about-page .who-image {
+        width: 420px;
+    }
+
+    .about-page .who-image img {
+        height: 320px;
+    }
+
+    .about-page .who-heading {
+        font-size: 22px;
+        max-width: 920px;
+    }
+
+    .about-page .stats-row {
+        gap: 70px;
+        margin-top: 28px;
+    }
+
+    .about-page .stat-number {
+        font-size: 42px;
+    }
+
+    .about-page .drives-grid {
+        gap: 48px;
+    }
+
+    .about-page .drive-item {
+        min-width: 280px;
+        max-width: 100%;
+    }
+
+    .about-page .principles-grid {
+        gap: 22px;
+    }
+
+    .about-page .principle-card {
+        padding: 24px;
+    }
+
+    .about-page .contact-footer-section {
+        gap: 24px;
+        padding: 0 40px 40px;
+    }
+
     /* Clients & Contact */
     .clients-box {
         padding: 20px 40px;
