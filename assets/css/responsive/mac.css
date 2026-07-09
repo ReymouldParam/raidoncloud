@@ -135,3 +135,61 @@
         }
     }
 }
+
+/* ABOUT US / SERVICES / PROJECTS PAGE MAC OPTIMIZATIONS */
+@supports (-webkit-hyphens: none) {
+    @media screen and (min-width: 1280px) and (max-width: 1440px) {
+        .hero-banner-content h1,
+        .hero-heading-wrap h1 {
+            font-size: clamp(3.8rem, 4vw, 4.4rem);
+        }
+
+        .who-image img {
+            height: 420px;
+        }
+
+        .service-card {
+            padding: 28px;
+        }
+
+        .projects-hero {
+            min-height: 560px;
+        }
+
+        .work-card-image {
+            min-width: 360px;
+        }
+    }
+
+    @media screen and (min-width: 1441px) and (max-width: 1728px) {
+        .hero-banner-content {
+            width: 86%;
+        }
+
+        .hero-heading-wrap,
+        .rd-services-grid-section,
+        .projects-hero-content {
+            width: 86%;
+        }
+
+        .projects-hero-content {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi) {
+    @media screen and (min-width: 992px) and (max-width: 1680px) {
+        .hero-banner-content h1,
+        .hero-heading-wrap h1,
+        .projects-hero-text h1,
+        .drive-content h3,
+        .work-card-text h3,
+        .service-content h3 {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    }
+}

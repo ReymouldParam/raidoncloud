@@ -179,3 +179,76 @@
         gap: 60px;
     }
 }
+
+/* ABOUT US / SERVICES / PROJECTS PAGE ADDITIONS */
+@media screen and (min-width: 1367px) and (max-width: 1920px) {
+    .hero-banner-content {
+        width: 86%;
+        padding: 140px 90px 160px;
+    }
+
+    .hero-banner-content h1 {
+        font-size: 56px;
+    }
+
+    .testimonial-section {
+        padding: 60px 40px;
+        min-height: auto;
+    }
+
+
+    .who-we-are,
+    .drives-us,
+    .principles-section {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .who-top {
+        gap: 56px;
+    }
+
+    .drives-grid {
+        gap: 96px;
+    }
+
+    .principles-grid {
+        gap: 32px;
+    }
+
+    .services-hero {
+        min-height: 580px;
+    }
+
+    .hero-heading-wrap {
+        max-width: 760px;
+    }
+
+    .hero-heading-wrap h1 {
+        font-size: clamp(4rem, 4vw, 5rem);
+    }
+
+    .rd-services-grid-section {
+        padding: 78px 64px 96px;
+    }
+
+    .projects-hero {
+        min-height: 640px;
+    }
+
+    .projects-hero-content {
+        padding: 88px 52px 96px;
+    }
+
+    .projects-hero-text h1 {
+        font-size: 4rem;
+    }
+
+    .work-card {
+        min-height: 620px;
+    }
+
+    .work-tabs {
+        gap: 32px;
+    }
+}

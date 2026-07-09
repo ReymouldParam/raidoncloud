@@ -313,9 +313,8 @@
 }
 
 .stat-number {
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 62px;
+    font-size: 50px;
     line-height: 1;
     color: #ffffff;
 }
@@ -438,7 +437,7 @@
 /* Responsive */
 @media (max-width: 900px) {
     .drives-us {
-        padding: 40px 24px 70px;
+        padding: 0px 24px 70px;
     }
 
     .drives-grid {

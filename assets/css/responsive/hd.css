@@ -330,3 +330,84 @@
         font-size: 16px;
     }
 }
+
+/* ABOUT US / SERVICES / PROJECTS PAGE ADDITIONS */
+@media screen and (min-width: 992px) and (max-width: 1366px) {
+    .hero-banner-content {
+        width: 92%;
+        padding: 110px 42px 140px;
+    }
+
+    .hero-banner-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-banner-content p {
+        font-size: 16px;
+    }
+
+    .testimonial-section {
+        padding: 52px 38px;
+    }
+
+    .who-we-are,
+    .drives-us,
+    .principles-section {
+        padding-left: 34px;
+        padding-right: 34px;
+    }
+
+    .who-top {
+        gap: 44px;
+    }
+
+    .drives-grid,
+    .principles-grid {
+        gap: 48px;
+    }
+
+    .principles-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .services-hero {
+        min-height: 520px;
+    }
+
+    .hero-heading-wrap {
+        padding: 0 20px;
+    }
+
+    .hero-heading-wrap h1 {
+        font-size: clamp(3.6rem, 4vw, 4.4rem);
+    }
+
+    .rd-services-grid-section {
+        padding: 64px 30px 84px;
+    }
+
+    .rd-services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projects-hero {
+        min-height: 540px;
+    }
+
+    .projects-hero-content {
+        padding: 82px 34px 92px;
+    }
+
+    .projects-hero-text h1 {
+        font-size: 42px;
+    }
+
+    .our-work-section {
+        padding: 62px 22px 72px;
+    }
+
+    .work-card {
+        gap: 28px;
+        min-height: 520px;
+    }
+}
