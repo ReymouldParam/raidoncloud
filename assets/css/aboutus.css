@@ -35,7 +35,7 @@
     z-index: 5;
     max-width: 1300px;
     margin: 0 auto;
-    padding: 130px 70px 150px;
+    padding: 62px 70px 150px;
 }
 
 .hero-banner-content h1 {
@@ -408,6 +408,7 @@
     align-items: flex-start;
     justify-content: center;
     padding-top: 4px;
+    margin-top: -5px;
 }
 
 .drive-icon svg {
