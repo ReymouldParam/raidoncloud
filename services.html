@@ -37,13 +37,37 @@
 
                 <nav class="desktop-nav">
                     <ul>
-                        <li><a class="active" href=".">Home</a></li>
+                        <li><a href=".">Home</a></li>
                         <li><a href="./aboutus.html">About</a></li>
                         <li><a href="./services.html">Services</a></li>
                         <li><a href="./projects.html">Projects</a></li>
                     </ul>
                 </nav>
+                <a href="#" class="contact-btn">
+                    Contact Us
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                
+                <!-- Mobile Toggle Button -->
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu">
+                    <span class="hamburger-icon">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </span>
+                </button>
             </div>
+            
+            <!-- Mobile Menu -->
+            <nav class="mobile-menu" id="mobileMenu">
+                <ul class="mobile-menu-list">
+                    <li><a href="." class="mobile-menu-link">Home</a></li>
+                    <li><a href="./aboutus.html" class="mobile-menu-link">About</a></li>
+                    <li><a href="./services.html" class="mobile-menu-link">Services</a></li>
+                    <li><a href="./projects.html" class="mobile-menu-link">Projects</a></li>
+                    <li><a href="#" class="mobile-contact-btn">Contact Us</a></li>
+                </ul>
+            </nav>
         </header>
 
         <!-- HERO: image + active service title/subtitle only -->
@@ -273,6 +297,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="./assets/css/js/home.js"></script>
+    <script src="./assets/css/js/global.js"></script>
 
 
     <script>
@@ -440,6 +465,7 @@
         renderHero(services[0]);
         renderCards(services[0].key);
     </script>
+    <script src="./assets/js/global.js"></script>
 
 </body>
 

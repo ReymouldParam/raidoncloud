@@ -329,7 +329,7 @@
 /* Responsive */
 @media (max-width: 900px) {
     .who-we-are {
-        padding: 40px 24px 60px;
+        padding: 40px 24px 20px;
     }
 
     .who-top {
@@ -346,8 +346,8 @@
     }
 
     .stats-row {
-        gap: 50px;
-        margin-top: 50px;
+        gap: 25px;
+        margin-top: 20px;
     }
 
     .stat-number {

@@ -499,6 +499,6 @@
 
     .work-card {
         gap: 28px;
-        min-height: 520px;
+        /* min-height: 520px; */
     }
 }
