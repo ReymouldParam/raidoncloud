@@ -46,7 +46,7 @@
                     Contact Us
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                
+
                 <!-- Mobile Toggle Button -->
                 <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu">
                     <span class="hamburger-icon">
@@ -56,7 +56,7 @@
                     </span>
                 </button>
             </div>
-            
+
             <!-- Mobile Menu -->
             <nav class="mobile-menu" id="mobileMenu">
                 <ul class="mobile-menu-list">
@@ -98,7 +98,7 @@
                         <div class="role">Founder of Raidon</div>
                     </div>
 
-                    <div class="nav-buttons">
+                    <!-- <div class="nav-buttons">
                         <button class="nav-btn prev" aria-label="Previous testimonial">
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"
                                 stroke-linejoin="round">
@@ -113,7 +113,7 @@
                                 <polyline points="7 7 17 7 17 17"></polyline>
                             </svg>
                         </button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -303,42 +303,42 @@
                         </div>
 
                         <div class="contact-right">
-                            <form>
+                            <form action="./contact.php" method="POST">
+
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label>Full Name</label>
-                                        <input type="text" placeholder="Name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Phone Number</label>
-                                        <input type="text" placeholder="Name">
+                                        <input type="text" name="name" placeholder="Enter your full name" required>
                                     </div>
 
+                                    <div class="form-group">
+                                        <label>Phone Number</label>
+                                        <input type="tel" name="number" placeholder="Enter your phone number" required>
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label>E-Mail*</label>
-                                    <input type="email" placeholder="Name">
+                                    <input type="email" name="email" placeholder="Enter your email" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>What Are You Interested In Services</label>
-                                    <textarea placeholder="Ex. Design, Development etc."></textarea>
+                                    <textarea name="service" placeholder="Ex. Design, Development etc." rows="4"
+                                        required></textarea>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Type Your Message</label>
-                                    <textarea placeholder="Message Here"></textarea>
+                                    <textarea name="message" placeholder="Message Here" rows="5" required></textarea>
                                 </div>
 
                                 <div class="checkbox-area">
-
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="privacy" required>
 
                                     <span>
-                                        By clicking the submit button, you agree to our privacy policy
+                                        By clicking the submit button, you agree to our privacy policy.
                                     </span>
-
                                 </div>
 
                                 <button type="submit" class="submit-btn">
@@ -411,6 +411,13 @@
             </footer>
 
         </section>
+        <!-- pop-up card  -->
+        <div id="popup-overlay"></div>
+        <div id="popup-message">
+            <h2 id="popup-heading"></h2>
+            <p id="popup-para"></p>
+            <button id="close-btn">Close</button>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
@@ -421,6 +428,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="./assets/js/global.js"></script>
+    <script src="./assets/css/js/home.js"></script>
 </body>
 
 </html>
