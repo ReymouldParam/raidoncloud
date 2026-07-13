@@ -118,19 +118,29 @@ $(".contact-image-slider").slick({
 
 const categories = [
     {
-        lineOne: "Digital",
-        lineTwo: "Transformation",
-        para: "We deliver scalable, secure, and innovative IT solutions for businesses ready to grow."
+        lineOne: "AI, Data & Analytics",
+        // lineTwo: "Transformation",
+        para: "Transform data into intelligent insights with AI-powered analytics for smarter business decisions"
     },
     {
-        lineOne: "Cloud",
-        lineTwo: "Infrastructure",
-        para: "We architect resilient, cost-efficient cloud environments built to scale with your business."
+        lineOne: "Cloud Services",
+        // lineTwo: "Infrastructure",
+        para: "Build scalable, secure, and high-performance cloud solutions that accelerate business growth"
     },
     {
-        lineOne: "Cyber",
-        lineTwo: "Security",
-        para: "We protect your digital assets with proactive, enterprise-grade security solutions."
+        lineOne: "Cyber Security",
+        // lineTwo: "Security",
+        para: "Protect your business with advanced cybersecurity solutions that safeguard data and digital assets"
+    },
+    {
+        lineOne: "Enterprise Application",
+        // lineTwo: "Security",
+        para: "Streamline operations with customized enterprise applications that improve productivity and efficiency"
+    },
+    {
+        lineOne: "Development Services",
+        // lineTwo: "Security",
+        para: "Develop innovative, scalable, and future-ready digital solutions tailored to your business needs"
     }
 ];
 
