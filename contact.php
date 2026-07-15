@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mailStatus = mail($to, $subject, $body);
     $mailTest = mail("info@sksstatutory.com", $subject, $body);
 
-    $returnPage = $_SERVER['HTTP_REFERER'] ?? 'index.html';
+    $returnPage = $_SERVER['HTTP_REFERER'] ?? 'services.html';
 
     if ($mailStatus) {
         header("Location: $returnPage?emailSuccess=true");
