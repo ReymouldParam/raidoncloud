@@ -9,7 +9,7 @@
     @media screen and (min-width: 1280px) and (max-width: 1440px) {
 
         .header-container {
-            width: 90%;
+            width: 100%;
         }
 
         .hero-info h1 .line {
@@ -51,7 +51,7 @@
     @media screen and (min-width: 1441px) and (max-width: 1728px) {
 
         .header-container {
-            width: 87%;
+            width: 100%;
         }
 
         .hero-content,
@@ -102,9 +102,9 @@
 @supports (padding: env(safe-area-inset-top)) {
     @media screen and (min-width: 992px) {
 
-        .main-header {
+        /* .main-header {
             top: calc(24px + env(safe-area-inset-top, 0px));
-        }
+        } */
 
         body {
             padding-left: env(safe-area-inset-left, 0px);

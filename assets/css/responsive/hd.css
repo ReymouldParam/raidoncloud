@@ -7,13 +7,13 @@
 
     /* Header */
     .main-header {
-        top: 24px;
+        top: 0;
     }
 
     .header-container {
-        width: 92%;
+        width: 100%;
         padding: 10px 18px;
-        border-radius: 16px;
+        border-radius: 0px;
     }
 
     .desktop-nav ul {
@@ -120,7 +120,7 @@
 
     .service-card {
         gap: 48px;
-        padding: 15px;
+        /* padding: 15px; */
         border-radius: 36px;
         top: 15%;
     }
@@ -135,8 +135,8 @@
     }
 
     .service-content h3 {
-        font-size: 2rem;
-        margin-bottom: 18px;
+        font-size: 50px;
+        margin-bottom: 0px;
     }
 
     .service-content p {
@@ -372,8 +372,9 @@
     }
 
     .clients-title {
-        font-size: 20px;
-        margin-bottom: 28px;
+        font-size: 36px;
+        margin-bottom: 12px;
+        color: #ffffff;
     }
 
     .clients-grid {

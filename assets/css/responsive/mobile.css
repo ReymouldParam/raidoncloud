@@ -13,7 +13,7 @@
     }
 
     .header-container {
-        width: 94%;
+        width: 100%;
         padding: 10px 16px;
         border-radius: 14px;
     }
@@ -389,7 +389,7 @@
     }
 
     .header-container {
-        width: 96%;
+        width: 100%;
         padding: 8px 12px;
     }
 
