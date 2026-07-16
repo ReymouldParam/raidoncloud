@@ -1,0 +1,459 @@
+.contact-hero {
+    position: relative;
+    height: 400px;
+    background: url("../images/contact-banner-img.png") center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.contact-overlay {
+    position: absolute;
+    inset: 0;
+    /* background: rgba(0, 0, 0, .5); */
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 650px;
+    color: #fff;
+}
+
+.contact-hero-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.contact-hero-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #d9d9d9;
+}
+
+@media(max-width:768px) {
+
+    .contact-hero {
+        height: 260px;
+    }
+
+    .contact-hero-content h1 {
+        font-size: 38px;
+    }
+
+    .contact-hero-content p {
+        font-size: 15px;
+        padding: 0 20px;
+    }
+
+}
+
+.contact-info-section {
+    background: #080d2a;
+    padding: 20px 0;
+}
+
+.section-title {
+    text-align: center;
+    color: #fff;
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 20px
+}
+
+.contact-info-grid {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+
+}
+
+.contact-card {
+
+    position: relative;
+    overflow: hidden;
+
+    background: #32374d;
+
+    border-radius: 20px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    transition: .4s;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+.contact-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -40%;
+
+    bottom: -120px;
+
+    width: 280px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle,
+
+            rgba(255, 190, 70, .35),
+
+            rgba(151, 88, 255, .30),
+
+            transparent 72%);
+
+    filter: blur(25px);
+
+    transition: .6s;
+
+}
+
+.contact-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.contact-card:hover::before {
+
+    transform: translateX(80px);
+
+}
+
+.contact-icon {
+
+    width: 72px;
+    height: 72px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(255, 255, 255, .15);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+    margin-bottom: 28px;
+
+    color: white;
+
+    font-size: 30px;
+
+}
+
+.contact-card h3 {
+
+    color: white;
+
+    font-size: 20px;
+
+    margin-bottom: 16px;
+
+}
+
+.contact-card p {
+
+    color: #d5d8e6;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+}
+
+@media(max-width:992px) {
+
+    .contact-info-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .section-title {
+
+        font-size: 34px;
+
+    }
+
+    .contact-info-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+.contact-form-section {
+    background: #080d2a;
+    /* padding-bottom: 20px; */
+}
+
+.contact-wrapper {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+.contact-form-box {
+
+    background: #090f2b;
+
+    padding: 60px;
+
+}
+
+.contact-form-box h2 {
+
+    color: white;
+
+    font-size: 42px;
+
+    line-height: 1.25;
+
+    margin-bottom: 50px;
+
+    max-width: 430px;
+
+}
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    background: transparent;
+
+    border: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .25);
+
+    padding: 12px 0;
+
+    color: white;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: .3s;
+
+    font-family: inherit;
+
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #b6bdd4;
+
+}
+
+.form-group select {
+
+    color: #b6bdd4;
+
+}
+
+.form-group option {
+
+    color: black;
+}
+
+.textarea-group {
+
+    margin-bottom: 45px;
+
+}
+
+.textarea-group textarea {
+
+    height: 120px;
+
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+
+    border-color: #f2b705;
+
+}
+
+.submit-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: #f2b705;
+
+    color: #111;
+
+    border: none;
+
+    padding: 16px 34px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: .35s;
+
+}
+
+.submit-btn:hover {
+
+    background: #ffd048;
+
+    transform: translateY(-3px);
+}
+
+.contact-image {
+
+    overflow: hidden;
+
+}
+
+.contact-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+@media(max-width:991px) {
+
+    .contact-wrapper {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .contact-image {
+
+        height: 420px;
+
+    }
+
+    .contact-form-box {
+
+        padding: 40px;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .contact-form-box h2 {
+
+        font-size: 32px;
+
+    }
+
+}
+
+.testimonial-contact-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    background: #040A20;
+}
+
+.testimonial-contact-wrapper::before {
+    content: "";
+    position: absolute;
+    left: -20%;
+    bottom: -10%;
+    width: 1400px;
+    height: 900px;
+    z-index: 0;
+    background:
+        linear-gradient(90deg,
+            #FD9F5C 0%,
+            #C06E83 40%,
+            #9747FF 100%);
+
+    opacity: .75;
+    filter: blur(140px);
+}
+
+.testimonial-contact-wrapper::after {
+    content: "";
+    position: absolute;
+    right: -300px;
+    bottom: -250px;
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+
+    background: #9747FF;
+
+    opacity: .75;
+
+    filter: blur(200px);
+
+    z-index: 0;
+}
+
+.contact-footer-section {
+    width: 95%;
+    margin: auto;
+}
+
+.testimonial-section,
+.footer-section {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+}

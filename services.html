@@ -70,7 +70,8 @@
             </nav>
         </header>
 
-        <!-- HERO: image + active service title/subtitle only -->
+
+        <!-- HERO: image + active service title/subtitle + pill navigation -->
         <section class="services-hero">
             <div class="hero-bg-layer" id="heroBgA"></div>
             <div class="hero-bg-layer" id="heroBgB"></div>
@@ -78,16 +79,20 @@
             <div class="grid-overlay"></div>
 
             <div class="hero-heading-wrap">
-                <h1 id="heroTitle">AI, Data & Analytics
-                </h1>
-                <p id="heroSubtitle">Transform your business with AI-driven insights, advanced analytics, and
-                    intelligent automation that help you make faster, smarter, and data-backed decisions</p>
+                <h1 id="heroTitle">AI, Data & Analytics</h1>
+                <p id="heroSubtitle">We help organizations unlock the power of Artificial Intelligence and Data to
+                    accelerate innovation, improve decision-making, automate operations, and create sustainable business
+                    value.</p>
             </div>
         </section>
 
-        <!-- SERVICES CARDS SECTION: now also contains key features (capabilities + icon badge) -->
-        <section class="rd-services-grid-section">
+        <!-- SERVICE CATEGORY PILLS: sits above Key Capabilities -->
+        <section class="service-pills-section">
+            <div class="service-pills" id="servicePills"></div>
+        </section>
 
+        <!-- KEY FEATURES SECTION -->
+        <section class="rd-services-grid-section">
             <div class="key-features-block">
                 <div class="capabilities">
                     <span class="label">What We Offer | Key Capabilities</span>
@@ -96,196 +101,130 @@
 
                 <div class="icon-badge">
                     <div class="icon-badge-inner">
-                        <svg viewBox="0 0 200 176" xmlns="http://www.w3.org/2000/svg">
-                            <line class="bulb-node-line" x1="100" y1="50" x2="100" y2="18" />
-                            <circle class="bulb-node-dot" cx="100" cy="14" r="4" />
-                            <line class="bulb-node-line" x1="126.9" y1="61.1" x2="148" y2="39" />
-                            <circle class="bulb-node-dot" cx="151" cy="36" r="4" />
-                            <line class="bulb-node-line" x1="138" y1="88" x2="168" y2="88" />
-                            <circle class="bulb-node-dot" cx="172" cy="88" r="4" />
-                            <line class="bulb-node-line" x1="126.9" y1="114.9" x2="148" y2="137" />
-                            <circle class="bulb-node-dot" cx="151" cy="140" r="4" />
-                            <line class="bulb-node-line" x1="73.1" y1="114.9" x2="52" y2="137" />
-                            <circle class="bulb-node-dot" cx="49" cy="140" r="4" />
-                            <line class="bulb-node-line" x1="62" y1="88" x2="32" y2="88" />
-                            <circle class="bulb-node-dot" cx="28" cy="88" r="4" />
-                            <line class="bulb-node-line" x1="73.1" y1="61.1" x2="52" y2="39" />
-                            <circle class="bulb-node-dot" cx="49" cy="36" r="4" />
-                            <circle class="bulb-outline" cx="100" cy="88" r="42" />
-                            <path class="bulb-outline"
-                                d="M 84 122 L 84 148 Q 84 156 92 156 L 108 156 Q 116 156 116 148 L 116 122" />
-                            <line class="bulb-outline" x1="86" y1="132" x2="114" y2="132" />
-                            <line class="bulb-outline" x1="86" y1="142" x2="114" y2="142" />
-                            <path class="bulb-outline" d="M 92 156 Q 100 164 108 156" />
-                            <text class="bulb-label" id="badgeLetters" x="100" y="88">AI</text>
-                        </svg>
+                        <img id="serviceIcon" src="" alt="" />
                     </div>
                 </div>
             </div>
-
-            <div class="rd-services-grid" id="servicesGrid"></div>
         </section>
         <section class="testimonial-contact-wrapper">
-            <section class="contact-footer-section">
-                <!-- CLIENTs -->
-                <div class="clients-box">
-                    <h4 class="clients-title">Our Clients</h4>
-                    <div class="clients-grid">
-                        <img src="assets/images/client-logo1.png" alt="">
-                        <img src="assets/images/client-logo2.png" alt="">
-                        <img src="assets/images/client-logo3.png" alt="">
-                        <img src="assets/images/client-logo4.png" alt="">
-                        <img src="assets/images/client-logo5.png" alt="">
-                        <img src="assets/images/client-logo6.png" alt="">
-                        <img src="assets/images/client-logo7.png" alt="">
-                        <img src="assets/images/client-logo8.png" alt="">
+            <section class="clients-section">
+                <h2 class="clients-title">Our Clients</h2>
+                <div class="marquee-frame">
+                    <div class="marquee-viewport">
+                        <div class="marquee-track" id="marqueeTrack">
+                            <!-- group 1 -->
+                            <div class="marquee-group">
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo1.png" alt="Columbus Vacations" />
+                                </div>
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo2.png" alt="Terrasolve" />
+                                </div>
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo3.png" alt="Accu Analytical" />
+                                </div>
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo4.png" alt="Livon Paints" />
+                                </div>
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo5.png" alt="ReyferJobs" />
+                                </div>
+                            </div>
+
+                            <!-- group 2 (duplicate for seamless loop) -->
+                            <div class="marquee-group" aria-hidden="true">
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo1.png" alt="" />
+                                </div>
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo2.png" alt="" />
+                                </div>
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo3.png" alt="" />
+                                </div>
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo4.png" alt="" />
+                                </div>
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo5.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- CONTACT -->
-                <div class="contact-box">
+            </section>
+            <footer class="footer-section">
 
-                    <div class="contact-top-line"></div>
+                <div class="footer-content">
 
-                    <div class="contact-grid">
+                    <!-- Left -->
+                    <div class="footer-column">
 
-                        <div class="contact-left">
-
-                            <h2>GET IN TOUCH</h2>
+                        <div class="footer-block">
+                            <h4>Address</h4>
 
                             <p>
-                                For enquiries or any questions please do not hesitate to contact us.
+                                H.No. 5-5-35/252/4/plot-23, At Durga
+                                Shakthipuram, Prasanthi Nagar,
+                                IDA Kukatpally, Hyderabad,
+                                Telangana, India-500072
                             </p>
+                        </div>
 
-                            <div class="contact-image-slider">
+                        <div class="footer-block">
+                            <h4>Contact</h4>
 
-                                <div>
-                                    <img src="assets/images/vercal-slider-img.jpg" alt="">
-                                </div>
+                            <a href="tel:+919966326477">
+                                +91 9966326477
+                            </a>
+                        </div>
 
-                                <div>
-                                    <img src="assets/images/Services-img.jpg" alt="">
-                                </div>
+                    </div>
 
-                                <div>
-                                    <img src="assets/images/vercal-slider-img.jpg" alt="">
-                                </div>
+                    <!-- Middle -->
 
-                                <div>
-                                    <img src="assets/images/Services-img.jpg" alt="">
-                                </div>
+                    <div class="footer-column">
+
+                        <div class="footer-block">
+                            <h4>Email</h4>
+
+                            <a href="#">info@xyz.com</a>
+                            <a href="#">name@xyz.com</a>
+                        </div>
+
+                        <div class="footer-block">
+                            <h4>Social Media</h4>
+
+                            <div class="social-icons">
+
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
 
                             </div>
 
                         </div>
 
-                        <div class="contact-right">
-                            <form action="./contact.php" method="POST">
-
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>Full Name</label>
-                                        <input type="text" name="name" placeholder="Enter your full name" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Phone Number</label>
-                                        <input type="tel" name="number" placeholder="Enter your phone number" required>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>E-Mail*</label>
-                                    <input type="email" name="email" placeholder="Enter your email" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>What Are You Interested In Services</label>
-                                    <textarea name="service" placeholder="Ex. Design, Development etc." rows="4"
-                                        required></textarea>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Type Your Message</label>
-                                    <textarea name="message" placeholder="Message Here" rows="5" required></textarea>
-                                </div>
-
-                                <div class="checkbox-area">
-                                    <input type="checkbox" name="privacy" required>
-
-                                    <span>
-                                        By clicking the submit button, you agree to our privacy policy.
-                                    </span>
-                                </div>
-
-                                <button type="submit" class="submit-btn">
-                                    Submit Request
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </button>
-
-                            </form>
-
-                        </div>
-
                     </div>
 
-                </div>
-            </section>
-            <footer class="footer-section">
+                    <!-- Right -->
 
-                <div class="footer-top-line"></div>
+                    <div class="footer-column footer-action">
 
-                <div class="footer-content">
-
-                    <div class="footer-column address">
-                        <h4>Address</h4>
-
-                        <p>
-                            H.No. 5-5-35/252/4/plot-23, At<br>
-                            Durga Shakthipuram, Prasanthi<br>
-                            Nagar, IDA Kukatpally, Hyderabad,<br>
-                            Telangana, India-500072
-                        </p>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4>Email</h4>
-
-                        <a href="#">info@xyz.com</a>
-                        <a href="#">name@xyz.com</a>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4>Social Media</h4>
-
-                        <div class="social-icons">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-
-                            <a href="#">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4>Contact</h4>
-
-                        <a href="tel:+919966326477">
-                            +91-9966326477
+                        <a href="#" class="footer-btn">
+                            GET IN TOUCH
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
+
                     </div>
 
-                </div>
-
-                <div class="footer-bottom-line"></div>
-
-                <div class="copyright">
-                    Copyright 2025 xyz | All Rights Reserved | Designed by ReyMould
                 </div>
 
             </footer>
-
         </section>
         <!-- pop-up card  -->
         <div id="popup-overlay"></div>
@@ -311,27 +250,29 @@
         const services = [
             {
                 key: "ai",
+                icon: "/assets/images/AI-service.png",
                 title: "AI, Data & Analytics",
-                subtitle: "Transform your business with AI-driven insights, advanced analytics, and intelligent automation that help you make faster, smarter, and data-backed decisions",
+                subtitle: "We help organizations unlock the power of Artificial Intelligence and Data to accelerate innovation, improve decision-making, automate operations, and create sustainable business value.",
                 bgImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1800&q=80",
                 badge: "AI",
-                cardTitle: "AI, Data & Analytics",
+                pillLabel: "AI, Data & Analytics",
                 capabilities: [
-                    "Generative AI & AI Agents",
-                    "Enterprise AI/ML Solutions",
+                    "Generative AI & Enterprise Copilots",
+                    "AI Agents & Intelligent Assistants",
+                    "Knowledge Management & Document Intelligence",
                     "Data Engineering & Modernization",
                     "Business Intelligence & Analytics",
-                    "Predictive Analytics & Machine Learning",
-                    "AI-Powered Automation & Insights"
+                    "Predictive Analytics & Machine Learning"
                 ]
             },
             {
                 key: "cloud",
+                icon: "/assets/images/cloud-computing.png",
                 title: "Cloud Services",
                 subtitle: "Empower your business with secure, scalable, and cost-effective cloud solutions that enhance agility, optimize performance, and accelerate digital transformation",
                 bgImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1800&q=80",
                 badge: "CS",
-                cardTitle: "Cloud Services",
+                pillLabel: "Cloud Services",
                 capabilities: [
                     "Cloud Strategy & Consulting",
                     "Cloud Migration & Modernization",
@@ -343,11 +284,12 @@
             },
             {
                 key: "cyber",
+                icon: "/assets/images/cyber-security 1.png",
                 title: "Cyber Security",
                 subtitle: "Protect your digital ecosystem with comprehensive cybersecurity solutions that minimize risks, ensure compliance, and strengthen business resilience",
                 bgImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1800&q=80",
                 badge: "CY",
-                cardTitle: "Cyber Security",
+                pillLabel: "Cyber Security",
                 capabilities: [
                     "Security Risk Assessment",
                     "Identity & Access Management (IAM)",
@@ -359,11 +301,12 @@
             },
             {
                 key: "apps",
+                icon: "/assets/images/Cyber-security.png",
                 title: "Enterprise Applications",
                 subtitle: "Modernize business operations with integrated enterprise applications that improve collaboration, streamline workflows, and enhance productivity",
                 bgImage: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1800&q=80",
                 badge: "EA",
-                cardTitle: "Enterprise Apps",
+                pillLabel: "Enterprise Apps",
                 capabilities: [
                     "ERP Implementation & Support",
                     "CRM Solutions",
@@ -375,11 +318,12 @@
             },
             {
                 key: "dev",
+                icon: "assets/images/development-service.png",
                 title: "Development Services",
                 subtitle: "Build innovative, scalable, and high-performance applications tailored to your business needs using modern technologies and agile development practices",
                 bgImage: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?auto=format&fit=crop&w=1800&q=80",
                 badge: "DV",
-                cardTitle: "Development",
+                pillLabel: "Development",
                 capabilities: [
                     "Custom Software Development",
                     "Web Application Development",
@@ -394,8 +338,8 @@
         const heroTitle = document.getElementById('heroTitle');
         const heroSubtitle = document.getElementById('heroSubtitle');
         const capabilitiesList = document.getElementById('capabilitiesList');
-        const badgeLetters = document.getElementById('badgeLetters');
-        const servicesGrid = document.getElementById('servicesGrid');
+        const serviceIcon = document.getElementById('serviceIcon');
+        const servicePills = document.getElementById('servicePills');
         const heroBgA = document.getElementById('heroBgA');
         const heroBgB = document.getElementById('heroBgB');
         let bgLayerToggle = false;
@@ -423,10 +367,6 @@
             return `<svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
         }
 
-        function arrowSVG() {
-            return `<svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>`;
-        }
-
         function renderHero(service) {
             setHeroBackground(service.bgImage);
 
@@ -436,7 +376,13 @@
 
             heroTitle.textContent = service.title;
             heroSubtitle.textContent = service.subtitle;
-            badgeLetters.textContent = service.badge;
+
+            serviceIcon.style.opacity = '0';
+            setTimeout(() => {
+                serviceIcon.src = service.icon;
+                serviceIcon.alt = service.title;
+                serviceIcon.style.opacity = '1';
+            }, 200);
 
             heroTitle.classList.add('rd-fade-update');
             heroSubtitle.classList.add('rd-fade-update');
@@ -446,31 +392,26 @@
             ).join('');
         }
 
-        function renderCards(activeKey) {
-            servicesGrid.innerHTML = services.map(s => `
-      <div class="rd-service-card ${s.key === activeKey ? 'rd-active' : ''}" data-key="${s.key}">
-        <div class="rd-card-text">
-          <h4>${s.cardTitle}</h4>
-          <p>From cloud strategy to full migration... <span class="rd-more">More</span></p>
-        </div>
-        <div class="rd-card-arrow">${arrowSVG()}</div>
-      </div>
-    `).join('');
+        function renderPills(activeKey) {
+            servicePills.innerHTML = services.map(s => `
+            <button type="button" class="service-pill ${s.key === activeKey ? 'active' : ''}" data-key="${s.key}">
+                ${s.pillLabel}
+            </button>
+        `).join('');
 
-            document.querySelectorAll('.rd-service-card').forEach(card => {
-                card.addEventListener('click', () => {
-                    const key = card.getAttribute('data-key');
+            servicePills.querySelectorAll('.service-pill').forEach(pill => {
+                pill.addEventListener('click', () => {
+                    const key = pill.getAttribute('data-key');
                     const service = services.find(s => s.key === key);
                     renderHero(service);
-                    renderCards(key);
-                    document.querySelector('.services-hero').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    renderPills(key);
                 });
             });
         }
 
         // Init
         renderHero(services[0]);
-        renderCards(services[0].key);
+        renderPills(services[0].key);
     </script>
 
 </body>

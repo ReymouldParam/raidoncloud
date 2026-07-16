@@ -73,7 +73,7 @@
 
 /* Retina Mac — sharper rendering & safe-area insets */
 @media screen and (-webkit-min-device-pixel-ratio: 2),
-       screen and (min-resolution: 192dpi) {
+screen and (min-resolution: 192dpi) {
 
     @media screen and (min-width: 992px) and (max-width: 1680px) {
 
@@ -139,6 +139,7 @@
 /* ABOUT US / SERVICES / PROJECTS PAGE MAC OPTIMIZATIONS */
 @supports (-webkit-hyphens: none) {
     @media screen and (min-width: 1280px) and (max-width: 1440px) {
+
         .hero-banner-content h1,
         .hero-heading-wrap h1 {
             font-size: clamp(3.8rem, 4vw, 4.4rem);
@@ -180,8 +181,9 @@
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2),
-       screen and (min-resolution: 192dpi) {
+screen and (min-resolution: 192dpi) {
     @media screen and (min-width: 992px) and (max-width: 1680px) {
+
         .hero-banner-content h1,
         .hero-heading-wrap h1,
         .projects-hero-text h1,

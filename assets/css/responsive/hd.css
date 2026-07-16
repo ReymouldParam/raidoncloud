@@ -96,7 +96,7 @@
 
     .explore-btn {
         min-width: 220px;
-        height: 56px;
+        height: 44px;
         font-size: 15px;
     }
 
@@ -475,7 +475,7 @@
     }
 
     .rd-services-grid-section {
-        padding: 64px 30px 84px;
+        /* padding: 64px 30px 84px; */
     }
 
     .rd-services-grid {

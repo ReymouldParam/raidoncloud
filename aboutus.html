@@ -81,7 +81,7 @@
             </div>
         </section>
         <!-- About Us -->
-        <section class="testimonial-section">
+        <!-- <section class="testimonial-section">
             <div class="avatar">
                 <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=300&q=80"
                     alt="Ashish Mishra">
@@ -99,26 +99,9 @@
                         <div class="name">Ashish Mishra</div>
                         <div class="role">Founder of Raidon</div>
                     </div>
-
-                    <!-- <div class="nav-buttons">
-                        <button class="nav-btn prev" aria-label="Previous testimonial">
-                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <line x1="17" y1="17" x2="7" y2="7"></line>
-                                <polyline points="7 17 7 7 17 7"></polyline>
-                            </svg>
-                        </button>
-                        <button class="nav-btn next" aria-label="Next testimonial">
-                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <line x1="7" y1="17" x2="17" y2="7"></line>
-                                <polyline points="7 7 17 7 17 17"></polyline>
-                            </svg>
-                        </button>
-                    </div> -->
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- Who we are  -->
         <section class="who-we-are">
             <div class="section-label">
@@ -149,11 +132,11 @@
 
             <div class="stats-row">
                 <div class="stat-item">
-                    <div class="stat-number">300+</div>
+                    <div class="stat-number" data-target="300">0+</div>
                     <div class="stat-desc">Enterprise collaboratio</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">180+</div>
+                    <div class="stat-number" data-target="180">180+</div>
                     <div class="stat-desc">Projects and product innovations that we work on with various business lines
                     </div>
                 </div>
@@ -253,24 +236,55 @@
                 </div>
             </div>
         </section>
-
         <section class="testimonial-contact-wrapper">
-            <section class="contact-footer-section">
-                <!-- CLIENTs -->
-                <div class="clients-box">
-                    <h4 class="clients-title">Our Clients</h4>
-                    <div class="clients-grid">
-                        <img src="assets/images/client-logo1.png" alt="">
-                        <img src="assets/images/client-logo2.png" alt="">
-                        <img src="assets/images/client-logo3.png" alt="">
-                        <img src="assets/images/client-logo4.png" alt="">
-                        <img src="assets/images/client-logo5.png" alt="">
-                        <img src="assets/images/client-logo6.png" alt="">
-                        <img src="assets/images/client-logo7.png" alt="">
-                        <img src="assets/images/client-logo8.png" alt="">
+            <section class="clients-section">
+                <h2 class="clients-title">Our Clients</h2>
+                <div class="marquee-frame">
+                    <div class="marquee-viewport">
+                        <div class="marquee-track" id="marqueeTrack">
+                            <!-- group 1 -->
+                            <div class="marquee-group">
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo1.png" alt="Columbus Vacations" />
+                                </div>
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo2.png" alt="Terrasolve" />
+                                </div>
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo3.png" alt="Accu Analytical" />
+                                </div>
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo4.png" alt="Livon Paints" />
+                                </div>
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo5.png" alt="ReyferJobs" />
+                                </div>
+                            </div>
+
+                            <!-- group 2 (duplicate for seamless loop) -->
+                            <div class="marquee-group" aria-hidden="true">
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo1.png" alt="" />
+                                </div>
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo2.png" alt="" />
+                                </div>
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo3.png" alt="" />
+                                </div>
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo4.png" alt="" />
+                                </div>
+                                <div class="client-logo">
+                                    <img src="./assets/images/client-logo5.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- CONTACT -->
+            </section>
+
+            <!-- <section class="contact-footer-section">
                 <div class="contact-box">
 
                     <div class="contact-top-line"></div>
@@ -282,7 +296,7 @@
                             <h2>GET IN TOUCH</h2>
 
                             <p>
-                                For enquiries or any questions please do not hesitate to contact us.
+                                Let's Discuss Your Next Digital Project
                             </p>
 
                             <div class="contact-image-slider">
@@ -352,69 +366,84 @@
                                 </button>
 
                             </form>
-
                         </div>
 
                     </div>
 
                 </div>
-            </section>
+            </section> -->
             <footer class="footer-section">
-
-                <div class="footer-top-line"></div>
 
                 <div class="footer-content">
 
-                    <div class="footer-column address">
-                        <h4>Address</h4>
-
-                        <p>
-                            H.No. 5-5-35/252/4/plot-23, At<br>
-                            Durga Shakthipuram, Prasanthi<br>
-                            Nagar, IDA Kukatpally, Hyderabad,<br>
-                            Telangana, India-500072
-                        </p>
-                    </div>
-
+                    <!-- Left -->
                     <div class="footer-column">
-                        <h4>Email</h4>
 
-                        <a href="#">info@xyz.com</a>
-                        <a href="#">name@xyz.com</a>
-                    </div>
+                        <div class="footer-block">
+                            <h4>Address</h4>
 
-                    <div class="footer-column">
-                        <h4>Social Media</h4>
+                            <p>
+                                H.No. 5-5-35/252/4/plot-23, At Durga
+                                Shakthipuram, Prasanthi Nagar,
+                                IDA Kukatpally, Hyderabad,
+                                Telangana, India-500072
+                            </p>
+                        </div>
 
-                        <div class="social-icons">
-                            <a href="#">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
+                        <div class="footer-block">
+                            <h4>Contact</h4>
 
-                            <a href="#">
-                                <i class="fa-brands fa-instagram"></i>
+                            <a href="tel:+919966326477">
+                                +91 9966326477
                             </a>
                         </div>
+
                     </div>
+
+                    <!-- Middle -->
 
                     <div class="footer-column">
-                        <h4>Contact</h4>
 
-                        <a href="tel:+919966326477">
-                            +91-9966326477
-                        </a>
+                        <div class="footer-block">
+                            <h4>Email</h4>
+
+                            <a href="#">info@xyz.com</a>
+                            <a href="#">name@xyz.com</a>
+                        </div>
+
+                        <div class="footer-block">
+                            <h4>Social Media</h4>
+
+                            <div class="social-icons">
+
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
-                </div>
+                    <!-- Right -->
 
-                <div class="footer-bottom-line"></div>
+                    <div class="footer-column footer-action">
 
-                <div class="copyright">
-                    Copyright 2025 xyz | All Rights Reserved | Designed by ReyMould
+                        <a href="#" class="footer-btn">
+                            GET IN TOUCH
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
                 </div>
 
             </footer>
-
         </section>
         <!-- pop-up card  -->
         <div id="popup-overlay"></div>
@@ -434,6 +463,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="./assets/css/js/home.js"></script>
     <script src="./assets/css/js/global.js"></script>
+    <script>
+        const counters = document.querySelectorAll(".stat-number");
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+
+                const counter = entry.target;
+                const target = +counter.dataset.target;
+                const duration = 2000;
+                const increment = target / (duration / 16);
+
+                let current = 0;
+
+                function updateCounter() {
+                    current += increment;
+
+                    if (current < target) {
+                        counter.textContent = Math.floor(current) + "+";
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target + "+";
+                    }
+                }
+
+                updateCounter();
+                observer.unobserve(counter);
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        counters.forEach(counter => observer.observe(counter));
+    </script>
 </body>
 
 </html>

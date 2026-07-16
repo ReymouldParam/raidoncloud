@@ -33,7 +33,7 @@
 .hero-banner-content {
     position: relative;
     z-index: 5;
-    max-width: 1300px;
+    /* max-width: 1300px; */
     margin: 0 auto;
     padding: 62px 70px 150px;
 }
@@ -490,14 +490,41 @@
 
 .principle-card {
     position: relative;
+    overflow: hidden;
     border-radius: 18px;
     padding: 28px 26px 34px;
-    overflow: hidden;
     height: 280px;
-    background:
-        radial-gradient(ellipse 260px 180px at 50% 100%, rgba(224, 122, 60, 0.45) 0%, rgba(120, 60, 160, 0.35) 45%, rgba(15, 18, 45, 0) 75%),
-        #12152e;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: #12152e;
+    border: 1px solid rgba(255, 255, 255, .06);
+}
+
+/* Animated Glow */
+.principle-card::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    left: -220px;
+    bottom: -240px;
+    border-radius: 50%;
+    pointer-events: none;
+
+    background: radial-gradient(circle,
+            rgba(224, 122, 60, .45) 0%,
+            rgba(120, 60, 160, .38) 45%,
+            rgba(120, 60, 160, .18) 65%,
+            transparent 82%);
+
+    filter: blur(30px);
+    animation: glowMove 8s ease-in-out infinite alternate;
+}
+
+
+/* Keep content above the glow */
+.principle-card h3,
+.principle-card p {
+    position: relative;
+    z-index: 2;
 }
 
 .principle-card h3 {
@@ -505,10 +532,10 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 17px;
-    color: #ffffff;
+    color: #fff;
     margin-bottom: 10px;
     padding-bottom: 6px;
-    background-image: linear-gradient(90deg, #f2b705, rgba(242, 183, 5, 0));
+    background-image: linear-gradient(90deg, #f2b705, transparent);
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: 100% 2px;
@@ -518,7 +545,28 @@
     font-size: 15.5px;
     line-height: 1.6;
     color: #cfd1de;
-    font-weight: 400;
+}
+
+@keyframes glowMove {
+    0% {
+        transform: translateX(0) translateY(0) scale(1);
+    }
+
+    25% {
+        transform: translateX(80px) translateY(-15px) scale(1.05);
+    }
+
+    50% {
+        transform: translateX(170px) translateY(10px) scale(1.1);
+    }
+
+    75% {
+        transform: translateX(260px) translateY(-10px) scale(1.05);
+    }
+
+    100% {
+        transform: translateX(340px) translateY(0) scale(1);
+    }
 }
 
 /* Responsive */
