@@ -1,3 +1,5 @@
+@import url(https://db.onlinewebfonts.com/c/33d2ace98dd5231182427e6acc4bc372?family=Right+Grotesk+Medium);
+
 .projects-hero {
     position: relative;
     width: 100%;
@@ -53,8 +55,9 @@
 
 .projects-hero-text p {
     margin-top: 22px;
-    font-size: 16px;
-    line-height: 1.6;
+    margin-top: 22px;
+    font-size: 20px;
+    line-height: 1.4;
     color: #d7d9e4;
     font-weight: 400;
 }
@@ -96,271 +99,138 @@
 }
 
 /* **************************** Projects Section  */
-
+/* ================= OUR WORK ================= */
 
 .our-work-section {
     width: 100%;
     background: #0a0e27;
-    padding: 20px 4% 25px;
+    padding: 30px 4% 60px;
 }
 
 .our-work-heading {
+    font-family: "Right Grotesk Medium";
     text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 34px;
-    color: #ffffff;
-    margin-bottom: 8px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
-/* ===== Tabs row ===== */
-.work-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 46px;
-    /* max-width: 1000px; */
-    margin: 0 auto 36px;
-    flex-wrap: wrap;
+.work-carousel {
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
 }
 
-.work-tab {
+.work-slide {
+    display: flex !important;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #fff;
+}
+
+.work-card-text {
+    width: 42%;
+    padding: 60px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    cursor: pointer;
-    min-width: 140px;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
-.work-tab .tab-label {
-    font-size: 15px;
-    font-weight: 500;
-    color: #9295a8;
-    text-align: center;
-    transition: color 0.3s ease, font-weight 0.3s ease;
-    white-space: nowrap;
+.work-card-text h3 {
+    font-family: "Right Grotesk Medium";
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #11152d;
 }
 
-.work-tab.is-active .tab-label {
-    color: #ffc928;
-    font-weight: 700;
+.work-card-text p {
+    font-size: 20px;
+    line-height: 1.4;
+    color: #555;
 }
 
-.tab-track {
-    position: relative;
-    width: 100%;
-    height: 3px;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 3px;
-    overflow: hidden;
-}
-
-.tab-fill {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg, #f2711c, #f2b705);
-    border-radius: 3px;
-}
-
-/* .work-tab.is-active .tab-fill {
-    animation: fillProgress 5s linear forwards;
-}
-
-.work-tab.is-done .tab-fill {
-    width: 100%;
-    animation: none;
-} */
-
-/* @keyframes fillProgress {
-    from {
-        width: 0%;
-    }
-
-    to {
-        width: 100%;
-    }
-} */
-
-/* ===== Content card ===== */
-.work-card {
-    position: relative;
-    max-width: 100%;
-    width: 100%;
-    margin: 0 auto;
-    border: 2px solid #2f6fed;
-    border-radius: 18px;
-    overflow: hidden;
-    display: flex;
-    align-items: stretch;
-    min-height: 420px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-}
-
-/* Left Content */
-.work-card-text {
-    flex: 0 0 50%;
-    max-width: 50%;
-    background: #ffffff;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Right Image */
 .work-card-image {
-    flex: 0 0 50%;
-    max-width: 50%;
-    position: relative;
-    overflow: hidden;
+    width: 58%;
+    height: 100%;
+    flex-shrink: 0;
 }
 
 .work-card-image-inner {
-    position: absolute;
-    inset: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* Content */
-.work-card-text-inner {
+/* Slick */
+
+.work-carousel .slick-list,
+.work-carousel .slick-track {
+    height: 500px;
+}
+
+.work-carousel .slick-slide {
+    height: 500px;
+}
+
+.work-carousel .slick-slide>div {
+    height: 100%;
+}
+
+.work-arrow {
     position: absolute;
-    inset: 0;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 18px;
-}
-
-/* Fade transition layers */
-.fade-layer {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 0.6s ease;
-    pointer-events: none;
-}
-
-.fade-layer.visible {
-    opacity: 1;
-    position: relative;
-    pointer-events: auto;
-}
-
-.work-card-text-inner,
-.work-card-image-inner {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 0.6s ease;
-}
-
-.work-card-text-inner.visible,
-.work-card-image-inner.visible {
-    opacity: 1;
-}
-
-.work-card-text-inner {
-    padding: 40px 44px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 16px;
-}
-
-.work-card-image-inner {
-    background-size: cover;
-    background-position: center;
-}
-
-/* ===== Dots ===== */
-.work-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 26px;
-}
-
-.work-dot {
-    width: 8px;
-    height: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border: none;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.25);
+    background: #ffc928;
     cursor: pointer;
-    transition: all 0.3s ease;
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.work-dot.is-active {
-    width: 26px;
-    border-radius: 5px;
-    background: #f2b705;
+.work-arrow-prev {
+    left: -26px;
 }
 
-@media (max-width: 768px) {
-    .work-card {
+.work-arrow-next {
+    right: -26px;
+}
+
+@media(max-width:991px) {
+
+    .work-slide {
         flex-direction: column;
+        height: auto;
     }
 
     .work-card-text,
     .work-card-image {
-        flex: 0 0 100%;
-        max-width: 100%;
+        width: 100%;
+    }
+
+    .work-card-image {
+        height: 260px;
     }
 
     .work-card-text {
-        min-height: 280px;
+        padding: 30px;
     }
 
-    .work-card-image {
-        min-height: 260px;
+    .work-carousel .slick-list,
+    .work-carousel .slick-track,
+    .work-carousel .slick-slide {
+        height: auto;
     }
 
-    .work-card-text-inner {
-        padding: 24px;
-    }
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .work-tabs {
-        gap: 26px;
-    }
-
-    .work-card {
-        flex-direction: column;
-    }
-
-    .work-card-text,
-    .work-card-image {
-        min-width: 100%;
-    }
-
-    .work-card-image {
-        height: 220px;
-    }
-}
-
-@media (max-width: 560px) {
-    .our-work-heading {
-        font-size: 26px;
-    }
-
-    .our-work-section {
-        padding: 40px 20px 50px;
-    }
-
-    .work-tabs {
-        gap: 18px;
-    }
-
-    .work-tab {
-        min-width: 110px;
-    }
-
-    .work-tab .tab-label {
-        font-size: 13px;
-    }
 }

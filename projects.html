@@ -84,162 +84,11 @@
         <section class="our-work-section">
             <h2 class="our-work-heading">Our Work</h2>
 
-            <div class="work-tabs" id="workTabs"></div>
-
-            <div class="work-card">
-                <div class="work-card-text" id="workCardText"></div>
-                <div class="work-card-image" id="workCardImage"></div>
-            </div>
-
-            <div class="work-dots" id="workDots"></div>
+            <div class="work-carousel" id="workCarousel"></div>
         </section>
         <section>
-            <section class="testimonial-section">
-
-                <div class="testimonial-left">
-
-                    <div class="testimonial-label">
-                        <h3>What Our Clients Say
-                        </h3>
-                        <span></span>
-                    </div>
-
-                    <h2>
-                        Trusted by businesses worldwide for delivering reliable, innovative, and results-driven IT
-                        solutions
-                    </h2>
-
-                    <p>
-                        Our clients value our commitment to quality, timely delivery, and technology expertise. Their
-                        success stories reflect our dedication to building long-term partnerships and delivering digital
-                        solutions that create measurable business impact
-                    </p>
-
-                </div>
-
-                <div class="testimonial-right">
-
-                    <div class="testimonial-stack">
-
-                        <div class="testimonial-card">
-                            <!-- <div class="user-image">
-                                <img src="assets/images/user-1.jpg" alt="">
-                            </div> -->
-
-                            <div class="content">
-                                <h4>Rajesh Kumar</h4>
-                                <p>
-                                    Raidon transformed our IT infrastructure with secure cloud solutions and seamless
-                                    implementation. Their team's expertise and support exceeded our expectations
-                                </p>
-                            </div>
-
-                            <div class="quote-icon">❞</div>
-                        </div>
-
-                        <div class="testimonial-card">
-                            <!-- <div class="user-image">
-                                <img src="assets/images/user-2.jpg" alt="">
-                            </div> -->
-
-                            <div class="content">
-                                <h4>Priya Sharma</h4>
-                                <p>
-                                    From cybersecurity to enterprise applications, Raidon delivered reliable solutions
-                                    that improved our operational efficiency. We highly recommend their services
-                                </p>
-                            </div>
-
-                            <div class="quote-icon">❞</div>
-                        </div>
-
-                        <div class="testimonial-card">
-                            <!-- <div class="user-image">
-                                <img src="assets/images/user-3.jpg" alt="">
-                            </div> -->
-
-                            <div class="content">
-                                <h4>Michael Anderson
-                                </h4>
-                                <p>
-                                    The AI and data analytics solutions provided by Raidon helped us make smarter
-                                    business decisions and achieve significant growth. A truly dependable technology
-                                    partner
-                                </p>
-                            </div>
-
-                            <div class="quote-icon">❞</div>
-                        </div>
-
-                        <div class="testimonial-card">
-                            <!-- <div class="user-image">
-                                <img src="assets/images/user-4.jpg" alt="">
-                            </div> -->
-
-                            <div class="content">
-                                <h4>Anita Reddy
-                                </h4>
-                                <p>
-                                    Their development team built a scalable, high-performance application tailored to
-                                    our business needs. Professional, responsive, and committed to excellence
-                                </p>
-                            </div>
-
-                            <div class="quote-icon">❞</div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-            <section class="clients-section">
-                <h2 class="clients-title">Our Clients</h2>
-                <div class="marquee-frame">
-                    <div class="marquee-viewport">
-                        <div class="marquee-track" id="marqueeTrack">
-                            <!-- group 1 -->
-                            <div class="marquee-group">
-                                <div class="client-logo">
-                                    <img src="./assets/images/client-logo1.png" alt="Columbus Vacations" />
-                                </div>
-                                <div class="client-logo">
-                                    <img src="./assets/images/client-logo2.png" alt="Terrasolve" />
-                                </div>
-                                <div class="client-logo">
-                                    <img src="./assets/images/client-logo3.png" alt="Accu Analytical" />
-                                </div>
-                                <div class="client-logo">
-                                    <img src="./assets/images/client-logo4.png" alt="Livon Paints" />
-                                </div>
-                                <div class="client-logo">
-                                    <img src="./assets/images/client-logo5.png" alt="ReyferJobs" />
-                                </div>
-                            </div>
-
-                            <!-- group 2 (duplicate for seamless loop) -->
-                            <div class="marquee-group" aria-hidden="true">
-                                <div class="client-logo">
-                                    <img src="./assets/images/client-logo1.png" alt="" />
-                                </div>
-                                <div class="client-logo">
-                                    <img src="./assets/images/client-logo2.png" alt="" />
-                                </div>
-                                <div class="client-logo">
-                                    <img src="./assets/images/client-logo3.png" alt="" />
-                                </div>
-                                <div class="client-logo">
-                                    <img src="./assets/images/client-logo4.png" alt="" />
-                                </div>
-                                <div class="client-logo">
-                                    <img src="./assets/images/client-logo5.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <footer class="footer-section">
+
                 <div class="footer-content">
 
                     <!-- Left -->
@@ -304,6 +153,7 @@
                             Get In Touch
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
+
                     </div>
 
                 </div>
@@ -335,115 +185,70 @@
             const ourWorkProjects = [
                 {
                     title: "Enterprise AI Copilot",
-                    description: "Built and deployed a generative AI copilot embedded across internal workflows for a global enterprise — cutting manual research and documentation time significantly while improving decision speed across departments.",
-                    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1000&q=80"
+                    description: "Built and deployed a generative AI copilot embedded across internal workflows for a global enterprise.",
+                    image: "https://picsum.photos/900/700?random=1"
                 },
                 {
                     title: "Multi-Cloud Migration",
-                    description: "Led a full multi-cloud migration for a large enterprise client, moving legacy on-premise workloads to a resilient multi-cloud architecture with zero downtime and a measurable reduction in infrastructure costs.",
-                    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1000&q=80"
+                    description: "Led a full multi-cloud migration with zero downtime and lower infrastructure costs.",
+                    image: "https://picsum.photos/900/700?random=2"
                 },
                 {
                     title: "SOC Implementation",
-                    description: "Designed and implemented a 24/7 Security Operations Center for a financial services firm, covering threat detection, incident response, and compliance monitoring across their global infrastructure.",
-                    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1000&q=80"
+                    description: "Designed and implemented a 24/7 Security Operations Center for enterprise infrastructure.",
+                    image: "https://picsum.photos/900/700?random=3"
                 },
                 {
-                    title: "Oracle Fusion Finance Rollout",
-                    description: "Full Oracle Fusion Finance & Procurement implementation for a retail group across 5 countries — delivered on time with full team training and hypercare support.",
-                    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1000&q=80"
+                    title: "Oracle Fusion Rollout",
+                    description: "Delivered Oracle Fusion Finance implementation across multiple countries.",
+                    image: "https://picsum.photos/900/700?random=4"
                 },
                 {
-                    title: "Retail Data Platform Modernization",
-                    description: "Rebuilt a fragmented retail data landscape into a unified, cloud-native data platform, enabling real-time analytics and predictive insights across supply chain and customer experience teams.",
-                    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1000&q=80"
+                    title: "Retail Data Platform",
+                    description: "Modernized a retail data platform with real-time analytics and predictive insights.",
+                    image: "https://picsum.photos/900/700?random=5"
                 }
             ];
 
-            const ourWorkTabsEl = document.getElementById("workTabs");
-            const ourWorkCardTextEl = document.getElementById("workCardText");
-            const ourWorkCardImageEl = document.getElementById("workCardImage");
-            const ourWorkDotsEl = document.getElementById("workDots");
+            const $carousel = $("#workCarousel");
 
-            let ourWorkCurrentIndex = 0;
-
-            function ourWorkRenderTabs() {
-                ourWorkTabsEl.innerHTML = ourWorkProjects
-                    .map(
-                        (p, i) => `
-                <div class="work-tab ${i === ourWorkCurrentIndex ? "is-active" : ""} ${i < ourWorkCurrentIndex ? "is-done" : ""}" data-index="${i}">
-                    <div class="tab-label">${p.title}</div>
-                    <div class="tab-track">
-                        <div class="tab-fill"></div>
-                    </div>
+            const slidesMarkup = ourWorkProjects
+                .map(
+                    (p) => `
+            <div class="work-slide">
+                <div class="work-card-text">
+                    <h3>${p.title}</h3>
+                    <p>${p.description}</p>
                 </div>
-            `
-                    )
-                    .join("");
+                <div class="work-card-image">
+                    <div class="work-card-image-inner" style="background-image:url('${p.image}')"></div>
+                </div>
+            </div>
+        `
+                )
+                .join("");
 
-                ourWorkTabsEl.querySelectorAll(".work-tab").forEach(tab => {
-                    tab.addEventListener("click", () => {
-                        ourWorkGoToSlide(Number(tab.dataset.index));
-                    });
-                });
-            }
+            $carousel.html(slidesMarkup);
 
-            function ourWorkRenderDots() {
-                ourWorkDotsEl.innerHTML = ourWorkProjects
-                    .map(
-                        (_, i) => `
-                <div class="work-dot ${i === ourWorkCurrentIndex ? "is-active" : ""}" data-index="${i}"></div>
-            `
-                    )
-                    .join("");
-
-                ourWorkDotsEl.querySelectorAll(".work-dot").forEach(dot => {
-                    dot.addEventListener("click", () => {
-                        ourWorkGoToSlide(Number(dot.dataset.index));
-                    });
-                });
-            }
-
-            function ourWorkRenderCard() {
-                const project = ourWorkProjects[ourWorkCurrentIndex];
-
-                const textInner = document.createElement("div");
-                textInner.className = "work-card-text-inner";
-                textInner.innerHTML = `
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-        `;
-
-                ourWorkCardTextEl.innerHTML = "";
-                ourWorkCardTextEl.appendChild(textInner);
-
-                requestAnimationFrame(() => {
-                    textInner.classList.add("visible");
-                });
-
-                const imageInner = document.createElement("div");
-                imageInner.className = "work-card-image-inner";
-                imageInner.style.backgroundImage = `url('${project.image}')`;
-
-                ourWorkCardImageEl.innerHTML = "";
-                ourWorkCardImageEl.appendChild(imageInner);
-
-                requestAnimationFrame(() => {
-                    imageInner.classList.add("visible");
-                });
-            }
-
-            function ourWorkGoToSlide(index) {
-                ourWorkCurrentIndex = index;
-                ourWorkRenderTabs();
-                ourWorkRenderDots();
-                ourWorkRenderCard();
-            }
-
-            // Initialize
-            ourWorkRenderTabs();
-            ourWorkRenderDots();
-            ourWorkRenderCard();
+            $carousel.slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                fade: true,
+                speed: 600,
+                dots: false,
+                arrows: true,
+                prevArrow: `<button type="button" class="work-arrow work-arrow-prev" aria-label="Previous project">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>`,
+                nextArrow: `<button type="button" class="work-arrow work-arrow-next" aria-label="Next project">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>`
+            });
         })();
     </script>
 </body>

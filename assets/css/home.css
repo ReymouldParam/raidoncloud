@@ -465,7 +465,6 @@
     max-width: 1600px;
     margin: auto;
     position: relative;
-    /* Added a fixed height so the absolute child cards have a space to live in */
     min-height: 800px;
 }
 
@@ -477,6 +476,8 @@
     color: #fff;
     font-size: 32px;
     margin-bottom: 15px;
+    font-weight: 500;
+    font-family: "Right Grotesk Medium";
 }
 
 .section-header span {
@@ -487,41 +488,33 @@
 }
 
 .service-card {
-    /* Set to absolute so they stack perfectly on top of one another */
     position: absolute;
     top: 10%;
     left: 0;
     width: 100%;
 
     display: flex;
-    /* align-items: center; */
     gap: 80px;
     padding: 40px;
-    border-radius: 50px;
+    border-radius: 24px;
+    /* match the image radius so edges don't look mismatched */
 
-    background:
-        radial-gradient(circle at left center,
-            rgba(45, 70, 140, 0.35) 0%,
-            rgba(45, 70, 140, 0.15) 25%,
-            transparent 55%),
-        linear-gradient(90deg,
-            #1b2247 0%,
-            #171d3d 40%,
-            #121731 100%);
+    background: #ffffff;
 
     border: 1px solid rgba(255, 255, 255, .15);
     box-shadow: 0 25px 50px rgba(0, 0, 0, .3);
     overflow: hidden;
 
-    /* Removed initial opacity and transforms. GSAP handles this now. */
-    will-change: transform, opacity;
+    will-change: transform, opacity, filter;
     transform-origin: top center;
+    backface-visibility: hidden;
+    /* stops flicker/ghosting on some GPUs during scale */
 }
 
 .service-image {
     flex: 0 0 42%;
     overflow: hidden;
-    border-radius: 35px;
+    border-radius: 20px;
 }
 
 .service-image img {
@@ -537,13 +530,13 @@
 }
 
 .service-content h3 {
-    color: #fff;
+    color: #000;
     font-size: 3rem;
     margin-bottom: 25px;
 }
 
 .service-content p {
-    color: rgba(255, 255, 255, .85);
+    color: #000;
     font-size: 1.3rem;
     line-height: 1.8;
     margin-bottom: 40px;
@@ -586,7 +579,6 @@
 
     .container {
         min-height: 1000px;
-        /* Taller on mobile to fit vertical stacking */
     }
 }
 
@@ -715,18 +707,14 @@
     margin: 0 auto;
 }
 
-/* The wrapper creates the scrollable space */
 .projects-wrapper {
     position: relative;
     height: 300vh;
-    /* 100vh for each card creates the scroll duration */
 }
 
-/* This sticks to the top while you scroll through the 300vh wrapper */
 .cards-pin {
     position: sticky;
     top: 100px;
-    /* Adjust this to change where it sticks on the screen */
     height: 700px;
     overflow: hidden;
     border-radius: 40px;
@@ -746,23 +734,13 @@
     overflow: hidden;
     border-radius: 40px;
 
-    /* Added transform-origin so the cards scale down towards the top */
-    will-change: transform, opacity;
+    will-change: transform, opacity, filter;
     transform-origin: top center;
+    backface-visibility: hidden;
 }
 
-/* z-index is crucial here so they overlap correctly */
-.project-card:nth-child(1) {
-    z-index: 1;
-}
-
-.project-card:nth-child(2) {
-    z-index: 2;
-}
-
-.project-card:nth-child(3) {
-    z-index: 3;
-}
+/* z-index removed here — now set dynamically in JS so it always
+   matches however many cards exist, instead of being hardcoded to 3 */
 
 .project-content {
     padding: 40px;

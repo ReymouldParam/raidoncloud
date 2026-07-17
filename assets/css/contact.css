@@ -1,3 +1,4 @@
+@import url(https://db.onlinewebfonts.com/c/33d2ace98dd5231182427e6acc4bc372?family=Right+Grotesk+Medium);
 .contact-hero {
     position: relative;
     height: 400px;
@@ -23,14 +24,15 @@
 }
 
 .contact-hero-content h1 {
-    font-size: 56px;
-    font-weight: 700;
+    font-family: "Right Grotesk Medium";
+    font-size: 50px;
+    font-weight: 600;
     margin-bottom: 18px;
 }
 
 .contact-hero-content p {
-    font-size: 18px;
-    line-height: 1.7;
+    font-size: 20px;
+    line-height: 1.4;
     color: #d9d9d9;
 }
 
@@ -57,10 +59,11 @@
 }
 
 .section-title {
+    font-family: "Right Grotesk Medium";
+    font-size: 50px;
     text-align: center;
     color: #fff;
-    font-size: 52px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 20px
 }
 
@@ -155,11 +158,10 @@
 }
 
 .contact-card h3 {
-
     color: white;
-
+    font-family: "Right Grotesk Medium";
     font-size: 20px;
-
+    letter-spacing: 1.5px;
     margin-bottom: 16px;
 
 }
@@ -228,7 +230,8 @@
 
     color: white;
 
-    font-size: 42px;
+    font-family: "Right Grotesk Medium";
+    font-size: 50px;
 
     line-height: 1.25;
 

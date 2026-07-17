@@ -1,3 +1,5 @@
+@import url(https://db.onlinewebfonts.com/c/33d2ace98dd5231182427e6acc4bc372?family=Right+Grotesk+Medium);
+
 /* ============================================================
    HD — 992px to 1366px (720p / 768p laptops & small desktops)
    Overrides only; does not affect Full HD+ or mobile layouts.
@@ -12,7 +14,7 @@
 
     .header-container {
         width: 100%;
-        padding: 10px 18px;
+        padding: 10px 4%;
         border-radius: 0px;
     }
 
@@ -52,8 +54,9 @@
     }
 
     .hero-info p {
-        font-size: 1rem;
+        font-size: 20px;
         line-height: 1.65;
+        font-weight: 200;
     }
 
     .hero-bottom-card {
@@ -87,6 +90,11 @@
 
     .section-tag h2 {
         font-size: 1.75rem;
+        font-weight: 500;
+        font-family: "Right Grotesk Medium";
+
+
+
     }
 
     .about-right p {
@@ -97,7 +105,8 @@
     .explore-btn {
         min-width: 220px;
         height: 44px;
-        font-size: 15px;
+        font-size: 14px;
+        font-weight: 400;
     }
 
     /* Services */
@@ -121,7 +130,7 @@
     .service-card {
         gap: 48px;
         /* padding: 15px; */
-        border-radius: 36px;
+        border-radius: 20px;
         top: 15%;
     }
 
@@ -137,12 +146,16 @@
     .service-content h3 {
         font-size: 50px;
         margin-bottom: 0px;
+        font-weight: 500;
+        font-family: "Right Grotesk Medium";
+        margin-bottom: 20px;
     }
 
     .service-content p {
-        font-size: 1rem;
-        line-height: 1.7;
+        font-size: 20px;
+        line-height: 1.5;
         margin-bottom: 28px;
+        font-weight: 300;
     }
 
     /* Digital */
@@ -156,14 +169,16 @@
     }
 
     .digital-content h2 {
-        font-size: clamp(2.8rem, 4vw, 3.6rem);
+        font-size: 60px;
         margin-bottom: 18px;
+        line-height: 1;
     }
 
     .digital-content p {
-        font-size: 13px;
-        max-width: 360px;
+        font-size: 20px;
+        /* max-width: 360px; */
         margin-bottom: 24px;
+        font-weight: 300;
     }
 
     .service-digital-btn {
@@ -211,12 +226,15 @@
     }
 
     .project-content h3 {
-        font-size: 30px;
+        font-family: "Right Grotesk Medium";
+        font-size: 50px;
         margin-bottom: 20px;
     }
 
     .project-content p {
-        font-size: 16px;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.2;
     }
 
     /* Testimonials */
@@ -239,16 +257,21 @@
     }
 
     .testimonial-label h3 {
-        font-size: 36px;
+        font-family: "Right Grotesk Medium";
+        font-size: 50px;
     }
 
     .testimonial-left h2 {
         font-size: 32px;
+        font-family: "Right Grotesk Medium";
+        font-weight: 300;
     }
 
     .testimonial-left p {
-        font-size: 16px;
-        margin-top: 48px;
+        font-size: 20px;
+        margin-top: 20px;
+        font-weight: 300;
+        line-height: 1.5;
     }
 
     .testimonial-card {
@@ -285,14 +308,15 @@
     }
 
     .about-page .hero-banner-content h1 {
-        font-size: 44px;
-        max-width: 560px;
+        font-size: 50px;
+        /* max-width: 560px; */
     }
 
     .about-page .hero-banner-content p {
-        font-size: 16px;
+        font-size: 20px;
         max-width: 500px;
         margin-top: 22px;
+        font-weight: 300;
     }
 
     .about-page .testimonial-section {
@@ -330,8 +354,10 @@
     }
 
     .about-page .who-heading {
-        font-size: 22px;
+        font-size: 34px;
+        font-family: "Right Grotesk Medium";
         max-width: 920px;
+        font-weight: 400;
     }
 
     .about-page .stats-row {
@@ -372,8 +398,9 @@
     }
 
     .clients-title {
-        font-size: 36px;
-        margin-bottom: 12px;
+        font-family: "Right Grotesk Medium";
+        font-size: 50px;
+        margin-bottom: 28px;
         color: #ffffff;
     }
 
@@ -406,21 +433,25 @@
     .submit-btn {
         width: 220px;
         height: 44px;
-        font-size: 15px;
+        font-size: 14px;
+        font-weight: 400;
     }
+}
 
-    /* Footer */
-    .footer-section {
-        padding: 10px 20px 10px;
-    }
+/* Footer */
+.footer-section {
+    padding: 10px 20px 10px;
+}
 
-    .footer-content {
-        gap: 48px;
-    }
+.footer-content {
+    gap: 48px;
+    padding: 1px 2%;
+}
 
-    .footer-column h4 {
-        font-size: 16px;
-    }
+.footer-column h4 {
+    font-size: 20px;
+    font-family: "Right Grotesk Medium";
+    letter-spacing: 1.5px;
 }
 
 /* ABOUT US / SERVICES / PROJECTS PAGE ADDITIONS */
@@ -439,7 +470,7 @@
     }
 
     .testimonial-section {
-        padding: 0px 38px;
+        padding: 0px 4%;
     }
 
     .who-we-are,
@@ -471,7 +502,8 @@
     }
 
     .hero-heading-wrap h1 {
-        font-size: clamp(3.6rem, 4vw, 4.4rem);
+        font-size: 50px;
+        font-family: "Right Grotesk Medium";
     }
 
     .rd-services-grid-section {
@@ -491,7 +523,9 @@
     }
 
     .projects-hero-text h1 {
-        font-size: 42px;
+        font-size: 50px;
+        line-height: 1;
+        font-family: "Right Grotesk Medium";
     }
 
     .our-work-section {

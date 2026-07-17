@@ -609,12 +609,9 @@ body.mobile-menu-open {
 }
 
 .footer-block p {
-
     color: #e0e0e0;
-
-    line-height: 1.7;
-
-    max-width: 320px;
+    line-height: 1.4;
+    max-width: 450px;
 
 }
 

@@ -4,11 +4,11 @@ gsap.registerPlugin(ScrollTrigger);
 /* ===========================
    Services Cards Animation
 =========================== */
-
 (function () {
     const cards = gsap.utils.toArray(".service-card");
-
     if (!cards.length) return;
+
+    cards.forEach((card, i) => card.style.zIndex = i + 1);
 
     gsap.set(cards, {
         y: (index) => (index === 0 ? 0 : window.innerHeight)
@@ -28,9 +28,23 @@ gsap.registerPlugin(ScrollTrigger);
     cards.forEach((card, index) => {
         if (index === 0) return;
 
+        // fully remove anything older than the immediately-previous card
+        // so only ONE faded card is ever visible behind the active one
+        if (index >= 2) {
+            tl.to(cards[index - 2], {
+                opacity: 0,
+                filter: "blur(0px)",
+                duration: 0.3,
+                ease: "none"
+            }, index);
+        }
+
+        // the immediately-previous card recedes into a soft single layer
         tl.to(cards[index - 1], {
-            scale: 0.92,
-            opacity: 0.3,
+            scale: 0.85,
+            y: -40,
+            opacity: 0.12,
+            filter: "blur(2px)",
             ease: "none"
         }, index);
 
@@ -40,7 +54,6 @@ gsap.registerPlugin(ScrollTrigger);
         }, index);
     });
 })();
-
 /* ===========================
    Testimonials
 =========================== */
@@ -200,11 +213,15 @@ scheduleLoop();
 /* ===========================
    Projects Animation
 =========================== */
-
+/* ===========================
+   Projects Animation
+=========================== */
 (function () {
     const cards = gsap.utils.toArray(".project-card");
-
     if (!cards.length) return;
+
+    // explicit, dynamic z-index instead of hardcoded nth-child rules
+    cards.forEach((card, i) => card.style.zIndex = i + 1);
 
     gsap.set(cards, {
         yPercent: (index) => (index === 0 ? 0 : 100)
@@ -222,9 +239,22 @@ scheduleLoop();
     cards.forEach((card, index) => {
         if (index === 0) return;
 
+        // fully clear anything older than the immediately-previous card
+        if (index >= 2) {
+            tl.to(cards[index - 2], {
+                opacity: 0,
+                filter: "blur(0px)",
+                duration: 0.3,
+                ease: "none"
+            }, index);
+        }
+
+        // the immediately-previous card recedes into one soft layer
         tl.to(cards[index - 1], {
-            scale: 0.94,
-            opacity: 0.4,
+            scale: 0.9,
+            y: -30,
+            opacity: 0.12,
+            filter: "blur(2px)",
             ease: "none"
         }, index);
 

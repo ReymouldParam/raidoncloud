@@ -266,10 +266,11 @@
 }
 
 .who-text p {
-    font-size: 17px;
-    line-height: 1.7;
-    color: #cfd1de;
-    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    /* max-width: 500px; */
+    /* margin-top: 22px; */
+    font-weight: 300;
 }
 
 .who-image {
@@ -320,10 +321,11 @@
 }
 
 .stat-desc {
-    font-size: 17px;
-    line-height: 1.5;
+    font-size: 20px;
+    line-height: 1.4;
     color: #cfd1de;
-    font-weight: 400;
+    font-weight: 300;
+    font-family: "Right Grotesk Medium";
 }
 
 /* Responsive */
@@ -371,7 +373,7 @@
 }
 
 .section-label span {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Right Grotesk Medium";
     font-weight: 700;
     font-size: 24px;
     color: #ffffff;
@@ -420,19 +422,19 @@
 }
 
 .drive-content h3 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-family: "Right Grotesk Medium";
+    font-weight: 400;
     font-size: 24px;
     color: #ffffff;
     margin-bottom: 12px;
 }
 
 .drive-content p {
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: 20px;
+    line-height: 1.4;
     color: #cfd1de;
-    font-weight: 400;
-    max-width: 460px;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Responsive */
@@ -467,9 +469,8 @@
 }
 
 .section-label span {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 24px;
+    font-family: "Right Grotesk Medium";
+    font-size: 50px;
     color: #ffffff;
 }
 
@@ -529,9 +530,9 @@
 
 .principle-card h3 {
     display: inline-block;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 17px;
+    font-family: "Right Grotesk Medium";
+    font-weight: 400;
+    font-size: 28px;
     color: #fff;
     margin-bottom: 10px;
     padding-bottom: 6px;
@@ -542,8 +543,10 @@
 }
 
 .principle-card p {
-    font-size: 15.5px;
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 300;
     color: #cfd1de;
 }
 
