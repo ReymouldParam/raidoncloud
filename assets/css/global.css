@@ -214,64 +214,55 @@ a {
     background-color: #ffc928;
 }
 
-/* Footer Part  */
+/* Footer */
 .footer-section {
-
     position: relative;
     overflow: hidden;
-
-    padding: 70px 0;
-
-    background: #0A0F2E;
-
+    padding: 40px 0;
+    /* background: #0A0F2E; */
+    isolation: isolate;
 }
 
-/* Animated background glow */
-
+/* Main gradient glow */
 .footer-section::before {
-
     content: "";
-
     position: absolute;
+    left: -20%;
+    bottom: -10%;
+    width: 1400px;
+    height: 900px;
 
-    width: 700px;
-    height: 700px;
+    background: linear-gradient(90deg,
+            #FD9F5C 0%,
+            #C06E83 40%,
+            #9747FF 100%);
 
-    left: -180px;
-    top: -320px;
-
-    border-radius: 50%;
-
-    background: radial-gradient(circle,
-            rgba(255, 181, 54, .28),
-            rgba(255, 181, 54, .08),
-            transparent 70%);
-
-    filter: blur(80px);
-
+    opacity: 0.75;
+    filter: blur(140px);
+    z-index: 0;
 }
 
+/* Purple glow */
 .footer-section::after {
-
     content: "";
-
     position: absolute;
-
-    width: 650px;
-    height: 650px;
-
-    right: -180px;
-    bottom: -300px;
-
+    right: -300px;
+    bottom: -250px;
+    width: 900px;
+    height: 900px;
     border-radius: 50%;
 
-    background: radial-gradient(circle,
-            rgba(138, 74, 255, .25),
-            rgba(138, 74, 255, .08),
-            transparent 70%);
+    background: #9747FF;
 
-    filter: blur(90px);
+    opacity: 0.75;
+    filter: blur(200px);
+    z-index: 0;
+}
 
+/* Keep footer content above the glows */
+.footer-section>* {
+    position: relative;
+    z-index: 1;
 }
 
 .footer-content {
@@ -279,7 +270,7 @@ a {
     position: relative;
     z-index: 2;
 
-    max-width: 1200px;
+    max-width: 1800px;
 
     margin: auto;
 
@@ -418,6 +409,7 @@ a {
 .social-icons a:hover {
 
     background: #FFC93C;
+    color: #fff;
 
     transform: translateY(-4px);
 

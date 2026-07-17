@@ -1074,7 +1074,7 @@
 /* ===== Section wrapper (dark navy) ===== */
 .clients-section {
     background: #0a0e27;
-    padding: 10px 0 70px;
+    padding: 10px 0 35px;
     border-top: 2px solid rgba(255, 255, 255, .15);
     border-bottom: 2px solid rgba(255, 255, 255, .15);
 }
@@ -1407,6 +1407,7 @@
     }
 
 }
+
 /* 
 .testimonial-contact-wrapper {
     position: relative;

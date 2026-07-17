@@ -33,7 +33,7 @@
         <header class="main-header">
             <div class="header-container">
                 <a href="." class="logo">
-                    <img src="./assets/images/website-logo.png" alt="Ecoraidon">
+                    <img src="./assets/images/raindon-logo.png" alt="Ecoraidon">
                 </a>
 
                 <nav class="desktop-nav">
@@ -44,7 +44,7 @@
                         <li><a href="./projects.html">Projects</a></li>
                     </ul>
                 </nav>
-                <a href="#" class="contact-btn">
+                <a href="./contact.html" class="contact-btn">
                     Contact Us
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -66,11 +66,10 @@
                     <li><a href="./aboutus.html" class="mobile-menu-link">About</a></li>
                     <li><a href="./services.html" class="mobile-menu-link">Services</a></li>
                     <li><a href="./projects.html" class="mobile-menu-link">Projects</a></li>
-                    <li><a href="#" class="mobile-contact-btn">Contact Us</a></li>
+                    <li><a href="#" class="mobile-contact-btn" href="./contact.html">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
-
         <div class="projects-hero">
             <div class="projects-hero-bg"></div>
             <div class="projects-hero-overlay"></div>
@@ -94,7 +93,7 @@
 
             <div class="work-dots" id="workDots"></div>
         </section>
-        <section class="testimonial-contact-wrapper">
+        <section>
             <section class="testimonial-section">
 
                 <div class="testimonial-left">
@@ -194,7 +193,6 @@
                 </div>
 
             </section>
-
             <section class="clients-section">
                 <h2 class="clients-title">Our Clients</h2>
                 <div class="marquee-frame">
@@ -353,7 +351,7 @@
                 },
                 {
                     title: "Oracle Fusion Finance Rollout",
-                    description: "Full Oracle Fusion Finance & Procurement implementation for a retail group across 5 countries — delivered on time with full team training and hypercare support. Full Oracle Fusion Finance & Procurement implementation for a retail group across 5 countries — delivered on time with full team training and hypercare support.",
+                    description: "Full Oracle Fusion Finance & Procurement implementation for a retail group across 5 countries — delivered on time with full team training and hypercare support.",
                     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1000&q=80"
                 },
                 {
@@ -363,58 +361,77 @@
                 }
             ];
 
-            const ourWorkTabsEl = document.getElementById('workTabs');
-            const ourWorkCardTextEl = document.getElementById('workCardText');
-            const ourWorkCardImageEl = document.getElementById('workCardImage');
-            const ourWorkDotsEl = document.getElementById('workDots');
+            const ourWorkTabsEl = document.getElementById("workTabs");
+            const ourWorkCardTextEl = document.getElementById("workCardText");
+            const ourWorkCardImageEl = document.getElementById("workCardImage");
+            const ourWorkDotsEl = document.getElementById("workDots");
 
             let ourWorkCurrentIndex = 0;
-            let ourWorkAutoplayTimer = null;
-            const OUR_WORK_SLIDE_DURATION = 5000;
 
             function ourWorkRenderTabs() {
-                ourWorkTabsEl.innerHTML = ourWorkProjects.map((p, i) => `
-      <div class="work-tab ${i === ourWorkCurrentIndex ? 'is-active' : ''} ${i < ourWorkCurrentIndex ? 'is-done' : ''}" data-index="${i}">
-        <div class="tab-label">${p.title}</div>
-        <div class="tab-track"><div class="tab-fill"></div></div>
-      </div>
-    `).join('');
+                ourWorkTabsEl.innerHTML = ourWorkProjects
+                    .map(
+                        (p, i) => `
+                <div class="work-tab ${i === ourWorkCurrentIndex ? "is-active" : ""} ${i < ourWorkCurrentIndex ? "is-done" : ""}" data-index="${i}">
+                    <div class="tab-label">${p.title}</div>
+                    <div class="tab-track">
+                        <div class="tab-fill"></div>
+                    </div>
+                </div>
+            `
+                    )
+                    .join("");
 
-                ourWorkTabsEl.querySelectorAll('.work-tab').forEach(tab => {
-                    tab.addEventListener('click', () => {
-                        ourWorkGoToSlide(parseInt(tab.getAttribute('data-index'), 10));
+                ourWorkTabsEl.querySelectorAll(".work-tab").forEach(tab => {
+                    tab.addEventListener("click", () => {
+                        ourWorkGoToSlide(Number(tab.dataset.index));
                     });
                 });
             }
 
             function ourWorkRenderDots() {
-                ourWorkDotsEl.innerHTML = ourWorkProjects.map((_, i) => `
-      <div class="work-dot ${i === ourWorkCurrentIndex ? 'is-active' : ''}" data-index="${i}"></div>
-    `).join('');
+                ourWorkDotsEl.innerHTML = ourWorkProjects
+                    .map(
+                        (_, i) => `
+                <div class="work-dot ${i === ourWorkCurrentIndex ? "is-active" : ""}" data-index="${i}"></div>
+            `
+                    )
+                    .join("");
 
-                ourWorkDotsEl.querySelectorAll('.work-dot').forEach(dot => {
-                    dot.addEventListener('click', () => {
-                        ourWorkGoToSlide(parseInt(dot.getAttribute('data-index'), 10));
+                ourWorkDotsEl.querySelectorAll(".work-dot").forEach(dot => {
+                    dot.addEventListener("click", () => {
+                        ourWorkGoToSlide(Number(dot.dataset.index));
                     });
                 });
             }
 
             function ourWorkRenderCard() {
-                const p = ourWorkProjects[ourWorkCurrentIndex];
+                const project = ourWorkProjects[ourWorkCurrentIndex];
 
-                const textInner = document.createElement('div');
-                textInner.className = 'work-card-text-inner';
-                textInner.innerHTML = `<h3>${p.title}</h3><p>${p.description}</p>`;
-                ourWorkCardTextEl.innerHTML = '';
+                const textInner = document.createElement("div");
+                textInner.className = "work-card-text-inner";
+                textInner.innerHTML = `
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+        `;
+
+                ourWorkCardTextEl.innerHTML = "";
                 ourWorkCardTextEl.appendChild(textInner);
-                requestAnimationFrame(() => textInner.classList.add('visible'));
 
-                const imageInner = document.createElement('div');
-                imageInner.className = 'work-card-image-inner';
-                imageInner.style.backgroundImage = `url('${p.image}')`;
-                ourWorkCardImageEl.innerHTML = '';
+                requestAnimationFrame(() => {
+                    textInner.classList.add("visible");
+                });
+
+                const imageInner = document.createElement("div");
+                imageInner.className = "work-card-image-inner";
+                imageInner.style.backgroundImage = `url('${project.image}')`;
+
+                ourWorkCardImageEl.innerHTML = "";
                 ourWorkCardImageEl.appendChild(imageInner);
-                requestAnimationFrame(() => imageInner.classList.add('visible'));
+
+                requestAnimationFrame(() => {
+                    imageInner.classList.add("visible");
+                });
             }
 
             function ourWorkGoToSlide(index) {
@@ -422,26 +439,12 @@
                 ourWorkRenderTabs();
                 ourWorkRenderDots();
                 ourWorkRenderCard();
-                ourWorkRestartAutoplay();
             }
 
-            function ourWorkNextSlide() {
-                ourWorkCurrentIndex = (ourWorkCurrentIndex + 1) % ourWorkProjects.length;
-                ourWorkRenderTabs();
-                ourWorkRenderDots();
-                ourWorkRenderCard();
-            }
-
-            function ourWorkRestartAutoplay() {
-                if (ourWorkAutoplayTimer) clearInterval(ourWorkAutoplayTimer);
-                ourWorkAutoplayTimer = setInterval(ourWorkNextSlide, OUR_WORK_SLIDE_DURATION);
-            }
-
-            // Init
+            // Initialize
             ourWorkRenderTabs();
             ourWorkRenderDots();
             ourWorkRenderCard();
-            ourWorkRestartAutoplay();
         })();
     </script>
 </body>
