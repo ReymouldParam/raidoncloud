@@ -13,17 +13,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $subject = "Enquiry from website";
 
     $body = "Name: $name
-    Email: $email
-    Phone Number: $number
-    Interested Service: $service
+Email: $email
+Phone Number: $number
+Interested Service: $service
 
-    Message:
-    $message";
+Message:
+$message";
 
-    // Send email to primary recipient
+    // Send email
     $mailStatus = mail($to, $subject, $body);
     $mailTest = mail("info@sksstatutory.com", $subject, $body);
 
+    // Redirect back to the previous page
     $returnPage = $_SERVER['HTTP_REFERER'] ?? 'services.html';
 
     if ($mailStatus) {
@@ -31,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         header("Location: $returnPage?emailSuccess=false");
     }
-    exit;
+
     exit;
 }
 ?>

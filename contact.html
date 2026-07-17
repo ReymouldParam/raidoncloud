@@ -90,12 +90,13 @@
             <div class="container">
 
                 <h2 class="section-title">
-                    Our Contact information
+                    Our Contact Information
                 </h2>
 
                 <div class="contact-info-grid">
 
-                    <div class="contact-card">
+                    <!-- Email -->
+                    <a href="mailto:hello@yourcompany.com" class="contact-card">
                         <div class="contact-icon">
                             <i class="fa-regular fa-envelope"></i>
                         </div>
@@ -104,9 +105,10 @@
 
                         <p>hello@yourcompany.com</p>
                         <p>support@yourcompany.com</p>
-                    </div>
+                    </a>
 
-                    <div class="contact-card">
+                    <!-- Phone -->
+                    <a href="tel:+919999999999" class="contact-card">
                         <div class="contact-icon">
                             <i class="fa-solid fa-phone"></i>
                         </div>
@@ -115,9 +117,11 @@
 
                         <p>+91 99999 99999</p>
                         <p>+91 88888 88888</p>
-                    </div>
+                    </a>
 
-                    <div class="contact-card">
+                    <!-- Location -->
+                    <a href="https://maps.google.com/?q=Hyderabad,Telangana,India" target="_blank" class="contact-card">
+
                         <div class="contact-icon">
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
@@ -126,18 +130,21 @@
 
                         <p>Hyderabad</p>
                         <p>Telangana, India</p>
-                    </div>
+                    </a>
 
-                    <div class="contact-card">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/918179578257" target="_blank" class="contact-card">
+
                         <div class="contact-icon">
                             <i class="fa-brands fa-whatsapp"></i>
                         </div>
 
                         <h3>Live Chat</h3>
 
-                        <p>+91 99999 99999</p>
+                        <p>+91 81795 78257</p>
                         <p>Available 24×7</p>
-                    </div>
+
+                    </a>
 
                 </div>
 
@@ -155,38 +162,38 @@
                             Feel free to get in touch or visit our location
                         </h2>
 
-                        <form>
+                        <form action="./contact.php" method="POST">
 
                             <div class="form-grid">
 
                                 <div class="form-group">
-                                    <input type="text" placeholder="Full Name">
+                                    <input type="text" name="name" placeholder="Full Name" required>
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="email" placeholder="Email Address">
+                                    <input type="email" name="email" placeholder="Email Address" required>
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="text" placeholder="Phone Number">
+                                    <input type="text" name="number" placeholder="Phone Number" required>
                                 </div>
 
                                 <div class="form-group">
-                                    <select>
-                                        <option>Select an option</option>
-                                        <option>General Inquiry</option>
-                                        <option>Project Discussion</option>
-                                        <option>Support</option>
+                                    <select name="service" required>
+                                        <option value="">Select an option</option>
+                                        <option value="General Inquiry">General Inquiry</option>
+                                        <option value="Project Discussion">Project Discussion</option>
+                                        <option value="Support">Support</option>
                                     </select>
                                 </div>
 
                             </div>
 
                             <div class="form-group textarea-group">
-                                <textarea placeholder="Type your message"></textarea>
+                                <textarea name="message" placeholder="Type your message" required></textarea>
                             </div>
 
-                            <button class="submit-btn">
+                            <button type="submit" class="submit-btn">
                                 Submit Request
                                 <i class="fa-solid fa-arrow-right-long"></i>
                             </button>
