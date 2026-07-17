@@ -69,3 +69,64 @@ document.addEventListener("DOMContentLoaded", function () {
     const baseUrl = window.location.href.split("?")[0];
     history.replaceState(null, null, baseUrl);
 });
+
+// Header Toggle Navbar
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuLinks = mobileMenu
+        ? mobileMenu.querySelectorAll('.mobile-menu-link, .mobile-contact-btn')
+        : [];
+
+    if (!mobileToggle || !mobileMenu) return;
+
+    const openMenu = () => {
+        mobileToggle.classList.add('active');
+        mobileMenu.classList.add('active');
+        // Set max-height to the panel's real content height — this is what
+        // eliminates the empty space, since CSS is no longer guessing a number.
+        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+        mobileToggle.setAttribute('aria-expanded', 'true');
+    };
+
+    const closeMenu = () => {
+        mobileToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        mobileMenu.style.maxHeight = '0px';
+        mobileToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    const toggleMenu = (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.contains('active') ? closeMenu() : openMenu();
+    };
+
+    mobileToggle.setAttribute('aria-expanded', 'false');
+    mobileToggle.addEventListener('click', toggleMenu);
+
+    menuLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+    document.addEventListener('click', (e) => {
+        if (
+            mobileMenu.classList.contains('active') &&
+            !mobileMenu.contains(e.target) &&
+            !mobileToggle.contains(e.target)
+        ) {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+            closeMenu();
+        }
+        // Keep the height in sync if content reflows (e.g. font loading) while open
+        if (mobileMenu.classList.contains('active')) {
+            mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+        }
+    });
+});

@@ -293,6 +293,7 @@
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
         gap: 28px;
+        align-items: flex-start;
     }
 }
 
@@ -730,6 +731,7 @@
     .clients-grid {
         grid-template-columns: 1fr 1fr;
         gap: 2px;
+        
     }
 
     .clients-grid img {
@@ -840,6 +842,8 @@
 
 /* ========================================================
    MOBILE TOGGLE NAVBAR - Mobile Only (max-width: 768px)
+   Professional dropdown card: floating panel, staggered
+   entrance, hover affordance, distinct CTA separation.
    ======================================================== */
 
 /* Hide toggle button on desktop and tablets */
@@ -856,19 +860,33 @@
 /* Show mobile menu on tablet portrait and below */
 @media screen and (max-width: 768px) {
 
+    /* Contact button lives inside the dropdown on mobile, not the header bar */
+    .contact-btn {
+        display: none;
+    }
+
+    .header-container {
+        position: relative;
+        position: relative;
+        margin-top: -10px;
+        border-radius: 0px;
+    }
+
     /* Mobile Toggle Button */
     .mobile-toggle {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 44px;
-        height: 44px;
-        background: transparent;
+        width: 30px;
+        height: 30px;
+        background: #000;
         border: none;
         cursor: pointer;
         padding: 0;
         z-index: 1001;
         position: relative;
+        padding: 5%;
+        border-radius: 5px;
     }
 
     .mobile-toggle:focus {
@@ -926,109 +944,171 @@
         transform: rotate(-45deg) translateY(-8px);
     }
 
-    /* Mobile Menu Container */
+    /* Mobile Menu Container — floating rounded card, not a full-bleed strip */
     .mobile-menu {
         position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        width: 100%;
-        background: linear-gradient(180deg, rgba(7, 21, 33, 0.95) 0%, rgba(7, 21, 33, 0.98) 100%);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 201, 40, 0.1);
-        border-top: 1px solid rgba(255, 201, 40, 0.15);
-        border-radius: 0 0 16px 16px;
+        top: calc(100% + 12px);
+        right: 16px;
+        left: 16px;
+        width: auto;
+        background: linear-gradient(165deg, rgba(10, 26, 41, 0.98) 0%, rgba(7, 18, 29, 0.99) 100%);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 201, 40, 0.14);
+        border-radius: 20px;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.4s ease-in-out;
+        opacity: 0;
+        transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+            opacity 0.3s ease,
+            box-shadow 0.4s ease;
         z-index: 999;
-        margin-top: 8px;
     }
 
+    /* max-height itself is set inline by JS (exact content height) so the
+       panel never shows leftover space — this rule only supplies the visual
+       state and a safety-net cap if JS hasn't run yet. */
     .mobile-menu.active {
-        max-height: 400px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        max-height: 80vh;
+        opacity: 1;
+        overflow-y: auto;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45),
+            0 1px 0 rgba(255, 255, 255, 0.06) inset;
     }
 
     /* Mobile Menu List */
     .mobile-menu-list {
         list-style: none;
-        padding: 0;
+        padding: 10px 10px 12px;
         margin: 0;
         display: flex;
         flex-direction: column;
+        gap: 2px;
+        margin-top: -100px;
     }
+}
 
-    .mobile-menu-list li {
-        border-bottom: 1px solid rgba(255, 201, 40, 0.05);
-        transition: background-color 0.2s ease;
-    }
+.mobile-menu-list li {
+    border-bottom: none;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.35s ease, transform 0.35s ease, background-color 0.2s ease;
+}
 
-    .mobile-menu-list li:last-child {
-        border-bottom: none;
-    }
+/* Staggered entrance — items fade/rise in sequence after the menu opens */
+.mobile-menu.active .mobile-menu-list li {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-    .mobile-menu-list li:hover {
-        background-color: rgba(255, 201, 40, 0.08);
-    }
+.mobile-menu.active .mobile-menu-list li:nth-child(1) {
+    transition-delay: 0.05s;
+}
 
-    /* Mobile Menu Links */
-    .mobile-menu-link {
-        display: block;
-        padding: 16px 24px;
-        color: #fff;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 500;
-        transition: color 0.2s ease, padding-left 0.2s ease;
-        text-decoration: none;
-    }
+.mobile-menu.active .mobile-menu-list li:nth-child(2) {
+    transition-delay: 0.10s;
+}
 
-    .mobile-menu-link:hover {
-        color: #ffc928;
-        padding-left: 32px;
-    }
+.mobile-menu.active .mobile-menu-list li:nth-child(3) {
+    transition-delay: 0.15s;
+}
 
-    .mobile-menu-link.active {
-        color: #ffc928;
-        background-color: rgba(255, 201, 40, 0.1);
-    }
+.mobile-menu.active .mobile-menu-list li:nth-child(4) {
+    transition-delay: 0.20s;
+}
 
-    /* Mobile Contact Button */
-    .mobile-contact-btn {
-        display: block;
-        padding: 16px 24px;
-        margin: 8px 12px;
-        background: #ffc928;
-        color: #111;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 600;
-        border-radius: 10px;
-        text-align: center;
-        transition: all 0.3s ease;
-    }
+.mobile-menu.active .mobile-menu-list li:nth-child(5) {
+    transition-delay: 0.25s;
+}
 
-    .mobile-contact-btn:hover {
-        background: #ffd945;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(255, 201, 40, 0.3);
-    }
+/* Divider between nav links and the CTA — replaces old per-row borders */
+.mobile-menu-list li:nth-last-child(2)::after {
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 10px 16px 6px;
+    background: linear-gradient(90deg, transparent, rgba(255, 201, 40, 0.15), transparent);
+}
 
-    .mobile-contact-btn:active {
-        transform: translateY(0);
-    }
+/* Mobile Menu Links */
+.mobile-menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 16px;
+    color: rgba(255, 255, 255, 0.88);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    border-radius: 12px;
+    transition: color 0.2s ease, background-color 0.2s ease, padding-left 0.2s ease;
+}
 
-    /* Position mobile toggle button correctly in header */
-    .header-container {
-        position: relative;
-    }
+/* Arrow affordance on hover — gives each row interactive feedback */
+.mobile-menu-link::after {
+    content: "→";
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    color: #ffc928;
+    font-size: 14px;
+}
 
-    /* Ensure contact button on mobile is hidden and menu appears correctly */
-    @media screen and (max-width: 768px) {
-        .contact-btn {
-            display: none;
-        }
-    }
+.mobile-menu-link:hover,
+.mobile-menu-link:active {
+    color: #ffc928;
+    background-color: rgba(255, 201, 40, 0.06);
+    padding-left: 20px;
+}
+
+.mobile-menu-link:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mobile-menu-link.active {
+    color: #ffc928;
+    background-color: rgba(255, 201, 40, 0.1);
+}
+
+/* Mobile Contact Button */
+.mobile-contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 24px;
+    margin: 4px 4px 0;
+    background: linear-gradient(135deg, #ffc928, #ffb300);
+    color: #111;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(255, 201, 40, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.mobile-contact-btn i {
+    transform: rotate(-45deg);
+    font-size: 13px;
+    transition: transform 0.25s ease;
+}
+
+.mobile-contact-btn:hover {
+    background: #ffd945;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(255, 201, 40, 0.35);
+    filter: brightness(1.03);
+}
+
+.mobile-contact-btn:hover i {
+    transform: rotate(0deg);
+}
+
+.mobile-contact-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(255, 201, 40, 0.25);
 }
