@@ -7,7 +7,6 @@
     <title> Raidon Cloud | Contact </title>
     <link rel="stylesheet" href="./assets/css/global.css" />
     <link rel="stylesheet" href="./assets/css/contact.css" />
-    <ink rel="stylesheet" href="./assets/css/home.css" />
 
     <!-- Responsive overrides (loaded after base styles; desktop view unchanged) -->
     <link rel="stylesheet" href="./assets/css/responsive/full-hd.css" />
@@ -152,9 +151,7 @@
         </section>
         <section class="contact-form-section">
             <div class="container">
-
                 <div class="contact-wrapper">
-
                     <!-- Left -->
                     <div class="contact-form-box">
 
@@ -180,10 +177,12 @@
 
                                 <div class="form-group">
                                     <select name="service" required>
-                                        <option value="">Select an option</option>
-                                        <option value="General Inquiry">General Inquiry</option>
-                                        <option value="Project Discussion">Project Discussion</option>
-                                        <option value="Support">Support</option>
+                                        <option value="">Select a service</option>
+                                        <option value="AI, Data & Analytics">AI, Data & Analytics</option>
+                                        <option value="Cloud Services">Cloud Services</option>
+                                        <option value="Cyber Security">Cyber Security</option>
+                                        <option value="Enterprise Apps">Enterprise Apps</option>
+                                        <option value="Development">Development</option>
                                     </select>
                                 </div>
 
@@ -216,6 +215,7 @@
         </section>
         <section>
             <footer class="footer-section">
+
                 <div class="footer-content">
 
                     <!-- Left -->
@@ -276,13 +276,18 @@
 
                     <div class="footer-column footer-action">
 
-                        <a href="./contact.html" class="explore-btn">
+                        <a href="./contact.html"
+                            style="display:inline-flex; align-items:center; justify-content:center; gap:12px; min-width:260px; height:64px; padding:0 32px; background:#FDC210; color:#111; border-radius:16px; font-weight:600; text-decoration:none; transition:all .3s ease;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'">
                             Get In Touch
-                            <i class="fa-solid fa-arrow-right"></i>
+                            <i class="fa-solid fa-arrow-right"
+                                style="font-size:14px; margin-left:4px; transform:rotate(-45deg); transition:transform .3s ease;"></i>
                         </a>
                     </div>
 
                 </div>
+
             </footer>
         </section>
         <!-- pop-up card  -->

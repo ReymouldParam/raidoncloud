@@ -542,7 +542,7 @@
     margin-bottom: 40px;
 }
 
-.explore-btn {
+/* .explore-btn {
     display: inline-flex;
     align-items: center;
     gap: 12px;
@@ -552,7 +552,7 @@
     text-decoration: none;
     border-radius: 14px;
     font-weight: 600;
-}
+} */
 
 .explore-btn i {
     font-size: 14px;
