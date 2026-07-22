@@ -130,7 +130,7 @@
     .service-card {
         gap: 48px;
         /* padding: 15px; */
-        border-radius:0px;
+        border-radius: 0px;
         top: 10%;
     }
 
@@ -207,13 +207,13 @@
     .cards-pin {
         height: 540px;
         top: 80px;
-        border-radius: 32px;
+        border-radius: 0px;
     }
 
     .project-card {
         height: 540px;
         grid-template-columns: 44% 56%;
-        border-radius: 32px;
+        border-radius: 0px;
     }
 
     .project-content {

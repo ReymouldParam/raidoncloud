@@ -132,91 +132,82 @@ $(".contact-image-slider").slick({
 /* ===========================
    Hero Text Animation
 =========================== */
-
 const categories = [
+
     {
         lineOne: "AI, Data & Analytics",
-        // lineTwo: "Transformation",
         para: "Transform data into intelligent insights with AI-powered analytics for smarter business decisions"
     },
+
     {
         lineOne: "Cloud Services",
-        // lineTwo: "Infrastructure",
         para: "Build scalable, secure, and high-performance cloud solutions that accelerate business growth"
     },
+
     {
         lineOne: "Cyber Security",
-        // lineTwo: "Security",
         para: "Protect your business with advanced cybersecurity solutions that safeguard data and digital assets"
     },
+
     {
         lineOne: "Enterprise Application",
-        // lineTwo: "Security",
         para: "Streamline operations with customized enterprise applications that improve productivity and efficiency"
     },
+
     {
         lineOne: "Development Services",
-        // lineTwo: "Security",
         para: "Develop innovative, scalable, and future-ready digital solutions tailored to your business needs"
     }
+
 ];
 
-const SWITCH_TIMES_MS = [0, 5400, 11700];
-const LOOP_DURATION_MS = 18000;
-const HEADING_EXIT_DURATION = 400;
-const PARA_FADE_OUT_DURATION = 350;
-
 const heading = document.getElementById("heroHeading");
-const lineOneEl = document.getElementById("lineOne");
-const lineTwoEl = document.getElementById("lineTwo");
-const paraEl = document.getElementById("heroPara");
+const lineOne = document.getElementById("lineOne");
+const para = document.getElementById("heroPara");
 
-let currentIndex = 0;
+let current = 0;
 
-function applyCategory(index) {
-    const next = categories[index];
+function animateText(index) {
 
     heading.classList.remove("is-active");
     heading.classList.add("is-leaving");
 
-    paraEl.classList.add("is-fading");
+    para.classList.add("is-fading");
 
     setTimeout(() => {
-        lineOneEl.textContent = next.lineOne;
-        lineTwoEl.textContent = next.lineTwo;
+
+        lineOne.textContent = categories[index].lineOne;
+
+        para.textContent = categories[index].para;
 
         heading.classList.remove("is-leaving");
+
         void heading.offsetWidth;
+
         heading.classList.add("is-active");
-    }, HEADING_EXIT_DURATION);
 
-    setTimeout(() => {
-        paraEl.textContent = next.para;
-        void paraEl.offsetWidth;
-        paraEl.classList.remove("is-fading");
-    }, PARA_FADE_OUT_DURATION);
+        para.classList.remove("is-fading");
+
+    }, 400);
+
 }
 
-function scheduleLoop() {
-    SWITCH_TIMES_MS.slice(1).forEach((timeMs) => {
-        setTimeout(() => {
-            currentIndex = (currentIndex + 1) % categories.length;
-            applyCategory(currentIndex);
-        }, timeMs);
-    });
+animateText(0);
 
-    setTimeout(() => {
-        currentIndex = 0;
-        applyCategory(currentIndex);
-        scheduleLoop();
-    }, LOOP_DURATION_MS);
-}
+setInterval(() => {
 
-scheduleLoop();
+    current++;
 
-/* ===========================
-   Projects Animation
-=========================== */
+    if (current === categories.length) {
+
+        current = 0;
+
+    }
+
+    animateText(current);
+
+}, 6000);
+
 /* ===========================
    Projects Animation
 =========================== */
@@ -224,7 +215,6 @@ scheduleLoop();
     const cards = gsap.utils.toArray(".project-card");
     if (!cards.length) return;
 
-    // explicit, dynamic z-index instead of hardcoded nth-child rules
     cards.forEach((card, i) => card.style.zIndex = i + 1);
 
     gsap.set(cards, {
@@ -243,27 +233,27 @@ scheduleLoop();
     cards.forEach((card, index) => {
         if (index === 0) return;
 
-        // fully clear anything older than the immediately-previous card
         if (index >= 2) {
             tl.to(cards[index - 2], {
                 opacity: 0,
                 filter: "blur(0px)",
-                duration: 0.3,
+                duration: 1,          // was 0.3
                 ease: "none"
             }, index);
         }
 
-        // the immediately-previous card recedes into one soft layer
         tl.to(cards[index - 1], {
             scale: 0.9,
             y: -30,
             opacity: 0.12,
             filter: "blur(2px)",
+            duration: 1,               // added
             ease: "none"
         }, index);
 
         tl.to(card, {
             yPercent: 0,
+            duration: 1,               // added
             ease: "none"
         }, index);
     });

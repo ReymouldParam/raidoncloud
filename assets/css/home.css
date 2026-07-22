@@ -24,7 +24,7 @@
     display: flex;
     height: 100%;
     width: fit-content;
-    animation: heroSlide 18s infinite;
+    animation: heroSlide 30s linear infinite;
 }
 
 .slide {
@@ -127,7 +127,7 @@
 }
 
 .hero-info h1.is-active .line span {
-    animation: riseUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: riseUp .8s cubic-bezier(.22, 1, .36, 1) forwards;
 }
 
 .hero-info h1.is-active .line:nth-child(2) span {
@@ -168,13 +168,15 @@
     line-height: 1.8;
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
     transform: translateY(0);
 }
 
 .hero-info p.is-fading {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(20px);
 }
 
 /* ==========================================
@@ -235,43 +237,44 @@
 /* ==========================================
    ANIMATION
 ========================================== */
-
 @keyframes heroSlide {
 
-    /* Banner 1 stays */
+    /* Slide 1 */
     0%,
-    25% {
+    16% {
         transform: translateX(0);
     }
 
-    /* Slide to Banner 2 */
-    30% {
+    /* Move to Slide 2 */
+    20%,
+    36% {
         transform: translateX(-100vw);
     }
 
-    /* Banner 2 stays */
-    35%,
-    60% {
-        transform: translateX(-100vw);
-    }
-
-    /* Slide to Banner 3 */
-    65% {
+    /* Move to Slide 3 */
+    40%,
+    56% {
         transform: translateX(-200vw);
     }
 
-    /* Banner 3 stays */
-    70%,
-    95% {
-        transform: translateX(-200vw);
-    }
-
-    /* Move to duplicated Banner 1 */
-    100% {
+    /* Move to Slide 4 */
+    60%,
+    76% {
         transform: translateX(-300vw);
     }
-}
 
+    /* Move to Slide 5 */
+    80%,
+    96% {
+        transform: translateX(-400vw);
+    }
+
+    /* Move to duplicated Slide 1 */
+    100% {
+        transform: translateX(-500vw);
+    }
+
+}
 
 /********************** ABOUT US SECTION */
 .about-highlight-section {
