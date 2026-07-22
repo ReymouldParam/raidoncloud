@@ -21,35 +21,39 @@ gsap.registerPlugin(ScrollTrigger);
             end: () => `+=${cards.length * 100}%`,
             scrub: 1,
             pin: true,
-            anticipatePin: 1
+            anticipatePin: 1,
+            snap: {
+                snapTo: 1 / (cards.length - 1),
+                duration: { min: 0.2, max: 0.6 },
+                ease: "power1.inOut"
+            }
         }
     });
 
     cards.forEach((card, index) => {
         if (index === 0) return;
-
-        // fully remove anything older than the immediately-previous card
         // so only ONE faded card is ever visible behind the active one
         if (index >= 2) {
             tl.to(cards[index - 2], {
                 opacity: 0,
                 filter: "blur(0px)",
-                duration: 0.3,
+                duration: 1,
                 ease: "none"
             }, index);
         }
-
         // the immediately-previous card recedes into a soft single layer
         tl.to(cards[index - 1], {
             scale: 0.85,
             y: -40,
             opacity: 0.12,
             filter: "blur(2px)",
+            duration: 1,
             ease: "none"
         }, index);
 
         tl.to(card, {
             y: 0,
+            duration: 1,
             ease: "none"
         }, index);
     });
